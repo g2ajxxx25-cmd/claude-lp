@@ -24,12 +24,10 @@
       --text-sub: #7A5A48;
       --accent-gold: #C9A96E;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Noto Sans JP', sans-serif;
-      background-color: var(--cream);
+      background: var(--cream);
       color: var(--text-main);
       max-width: 390px;
       margin: 0 auto;
@@ -38,148 +36,11 @@
       line-height: 1.8;
     }
 
-    /* ========== HERO ========== */
-    .hero {
-      background: linear-gradient(150deg, #FFFAF6 0%, #FAF0E6 55%, #F0DED0 100%);
-      position: relative;
-      overflow: hidden;
-      padding: 44px 22px 40px;
-    }
-
-    /* decorative circles */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -70px; right: -70px;
-      width: 220px; height: 220px;
-      background: radial-gradient(circle, rgba(181,105,75,0.12) 0%, transparent 65%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .hero-top-badge {
-      display: inline-block;
-      border: 1px solid var(--terracotta-pale);
-      color: var(--terracotta);
-      font-size: 10.5px;
-      letter-spacing: 0.1em;
-      padding: 4px 14px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.7);
-      margin-bottom: 18px;
-    }
-
-    /* 2-column row: text left, photo right */
-    .hero-two-col {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 22px;
-    }
-
-    .hero-copy-col {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .hero-sub {
-      font-family: 'Noto Serif JP', serif;
-      color: var(--brown-mid);
-      font-size: 12.5px;
-      line-height: 2.0;
-      letter-spacing: 0.03em;
-    }
-
-    .hero-sub .accent {
-      color: var(--terracotta);
-      font-weight: 600;
-    }
-
-    .hero-photo-col {
-      width: 128px;
-      flex-shrink: 0;
-    }
-
-    .hero-photo-box {
-      width: 128px;
-      height: 162px;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(181,105,75,0.18);
-      background: linear-gradient(160deg, #E8C8AE 0%, #D4A882 55%, #C49070 100%);
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
-
-    /* subtle inner highlight */
-    .hero-photo-box::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(0,0,0,0.06) 100%);
-      border-radius: 18px;
-    }
-
-    .hero-photo-emoji {
-      font-size: 72px;
-      line-height: 1;
-      padding-bottom: 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Main title */
-    .hero-main-title {
-      font-family: 'Noto Serif JP', serif;
-      color: var(--brown-dark);
-      font-size: 25px;
-      font-weight: 700;
-      line-height: 1.5;
-      margin-bottom: 8px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-main-title-en {
-      font-size: 10.5px;
-      color: var(--brown-light);
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    /* 300名限定 badge */
-    .hero-limit-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--terracotta);
-      color: white;
-      font-size: 14px;
-      font-weight: 700;
-      padding: 10px 22px;
-      border-radius: 50px;
-      margin-bottom: 16px;
-      letter-spacing: 0.06em;
-      box-shadow: 0 5px 16px rgba(181,105,75,0.38);
-    }
-
-    .hero-limit-badge .star { font-size: 13px; }
-
-    .hero-note {
-      margin-top: 12px;
-      color: var(--text-sub);
-      font-size: 11px;
-      letter-spacing: 0.04em;
-      text-align: center;
-    }
 
     /* ========== BUTTONS ========== */
     .btn-primary {
       display: block;
-      background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--terracotta) 100%);
+      background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta));
       color: white;
       font-size: 15px;
       font-weight: 700;
@@ -188,69 +49,150 @@
       border-radius: 50px;
       text-decoration: none;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(181, 105, 75, 0.4);
-      border: none;
-      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(181,105,75,0.4);
       line-height: 1.4;
     }
-
-    .btn-arrow {
-      display: inline-block;
-      margin-left: 6px;
-      font-size: 12px;
-    }
-
-    .btn-sub {
-      display: block;
-      color: rgba(255,255,255,0.78);
-      font-size: 11px;
-      font-weight: 400;
-      margin-top: 5px;
-    }
+    .btn-sub { display: block; color: rgba(255,255,255,0.75); font-size: 11px; margin-top: 5px; }
 
     /* ========== SECTION BASE ========== */
     section { padding: 52px 24px; }
-
     .section-label {
-      display: inline-block;
+      display: block;
       color: var(--terracotta);
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-
     .section-title {
       font-family: 'Noto Serif JP', serif;
       font-size: 22px;
       font-weight: 700;
-      line-height: 1.5;
+      line-height: 1.55;
       color: var(--brown-dark);
       margin-bottom: 24px;
     }
-
     .section-title span { color: var(--terracotta); }
-
     .divider {
-      width: 36px;
-      height: 2px;
+      width: 32px; height: 2px;
       background: var(--terracotta);
       margin: 0 auto 28px;
       border-radius: 2px;
     }
 
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(150deg, #FFFAF6 0%, #FAF0E6 60%, #F0DED0 100%);
+      padding: 44px 22px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(181,105,75,0.1) 0%, transparent 65%);
+      border-radius: 50%;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      border: 1px solid var(--terracotta-pale);
+      color: var(--terracotta);
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      padding: 4px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.7);
+      margin-bottom: 22px;
+    }
+
+    .hero-hook {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      color: var(--brown-mid);
+      line-height: 1.9;
+      margin-bottom: 14px;
+    }
+
+    .hero-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--brown-dark);
+      line-height: 1.5;
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+    .hero-main em {
+      font-style: normal;
+      color: var(--terracotta);
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 2.0;
+      margin-bottom: 24px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.65);
+      border-radius: 10px;
+      border-left: 3px solid var(--terracotta-pale);
+    }
+    .hero-sub strong { color: var(--terracotta); font-weight: 700; }
+
+    /* 対象者ミニリスト */
+    .hero-for-list {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .hero-for-list li {
+      font-size: 12.5px;
+      color: var(--brown-mid);
+      padding: 6px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      border-bottom: 1px dashed var(--border);
+      line-height: 1.6;
+    }
+    .hero-for-list li:last-child { border-bottom: none; }
+    .hero-for-list li::before {
+      content: '■';
+      color: var(--terracotta);
+      font-size: 9px;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .hero-limit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--terracotta);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 9px 20px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      box-shadow: 0 5px 16px rgba(181,105,75,0.35);
+    }
+    .hero-note { margin-top: 12px; color: var(--text-sub); font-size: 11px; text-align: center; }
+
     /* ========== EMPATHY ========== */
     .empathy { background: var(--white); }
 
-    .pain-list { list-style: none; margin-bottom: 32px; }
-
-    .pain-list li {
+    .scene-list { list-style: none; margin-bottom: 28px; }
+    .scene-list li {
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      padding: 14px 16px;
-      margin-bottom: 10px;
+      padding: 13px 16px;
+      margin-bottom: 8px;
       background: var(--cream);
       border-radius: 12px;
       border-left: 3px solid var(--terracotta-pale);
@@ -258,364 +200,530 @@
       line-height: 1.7;
       color: var(--brown-dark);
     }
+    .scene-icon { flex-shrink: 0; font-size: 16px; margin-top: 1px; }
 
-    .pain-list li::before {
-      content: '・';
+    /* タスク付箋 */
+    .task-overflow {
+      background: #FFF8F5;
+      border: 2px solid var(--terracotta-pale);
+      border-radius: 16px;
+      padding: 20px 16px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .task-overflow-label {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 14px;
+    }
+    .task-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .task-tag {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 7px;
+      padding: 6px 11px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--brown-mid);
+      box-shadow: 2px 3px 0 var(--cream-deep);
+    }
+    .task-tag:nth-child(odd) { transform: rotate(-1deg); }
+    .task-tag:nth-child(even) { transform: rotate(0.8deg); }
+    .task-tag:nth-child(3n) { transform: rotate(-0.4deg); }
+    .task-overflow-comment {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      font-weight: 700;
       color: var(--terracotta);
-      font-size: 18px;
-      flex-shrink: 0;
-      margin-top: -2px;
     }
 
     .empathy-voice {
       background: var(--cream-mid);
       border-radius: 16px;
-      padding: 24px 20px;
-      margin-bottom: 20px;
+      padding: 22px 20px;
+      margin-bottom: 16px;
       text-align: center;
     }
-
-    .empathy-voice p {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 15px;
-      line-height: 1.9;
-      color: var(--brown-dark);
-      margin-bottom: 8px;
-    }
-
-    .voice-wish {
-      font-size: 17px !important;
-      font-weight: 600 !important;
-      color: var(--terracotta) !important;
-    }
-
-    .empathy-result {
-      text-align: center;
-      padding: 20px;
-      background: #FFF8F5;
-      border: 1.5px solid var(--terracotta-pale);
-      border-radius: 12px;
-    }
-
-    .empathy-result p {
-      font-size: 14px;
+    .empathy-voice .label {
+      font-size: 12px;
       color: var(--text-sub);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
-
-    .result-text {
+    .empathy-voice .wish {
       font-family: 'Noto Serif JP', serif;
       font-size: 17px;
       font-weight: 600;
       color: var(--terracotta);
+      line-height: 1.9;
     }
 
-    /* ========== MISSION ========== */
-    .mission {
-      background: linear-gradient(160deg, #3D2B1F 0%, #5A3A28 100%);
+    .empathy-result {
+      text-align: center;
+      padding: 18px 20px;
+      background: #FFF8F5;
+      border: 1.5px solid var(--terracotta-pale);
+      border-radius: 12px;
+    }
+    .empathy-result .label { font-size: 13px; color: var(--text-sub); margin-bottom: 8px; }
+    .empathy-result .main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--terracotta);
+      line-height: 1.7;
+    }
+
+    /* ========== BEFORE / AFTER ========== */
+    .ba-before {
+      background: linear-gradient(165deg, #23212e 0%, #1a1825 100%);
+      padding: 40px 22px 48px;
+    }
+    .ba-after {
+      background: linear-gradient(165deg, #5eafd6 0%, #2d88bb 50%, #1a6fa0 100%);
+      padding: 40px 22px 48px;
+    }
+    .ba-title {
+      font-size: 20px;
+      font-weight: 700;
       color: white;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ba-rule {
+      width: 100px; height: 2px;
+      background: rgba(255,255,255,0.3);
+      margin-bottom: 26px;
+      border-radius: 2px;
+    }
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .thought {
+      background: rgba(255,255,255,0.13);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      border-radius: 44px;
+      padding: 16px 13px;
+      text-align: center;
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.55;
+      position: relative;
+    }
+    .thought::after {
+      content: '●  ●';
+      position: absolute;
+      bottom: -18px;
+      left: 22px;
+      font-size: 6px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 3px;
+    }
+    .thought .num {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+    .before .thought .num { color: #7ff0c8; }
+    .after  .thought .num { color: #ffe44d; }
+    .ba-note {
+      background: rgba(0,0,0,0.18);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
       text-align: center;
     }
+    .ba-note strong { display: block; font-size: 14px; margin-top: 4px; color: white; }
 
-    .mission .section-label { color: var(--terracotta-pale); }
-    .mission .section-title { color: white; }
-
-    .mission-body {
-      font-size: 15px;
-      line-height: 2.1;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 24px;
+    /* ========== FOR WHO ========== */
+    .for-who { background: var(--cream-mid); padding: 52px 20px; }
+    .who-cards { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+    .who-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(61,43,31,0.07);
     }
-
-    .mission-highlight {
-      display: inline-block;
-      background: rgba(181, 105, 75, 0.25);
-      border: 1px solid rgba(181, 105, 75, 0.5);
-      border-radius: 10px;
-      padding: 16px 20px;
+    .who-card-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .who-icon {
+      width: 42px; height: 42px;
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 19px; flex-shrink: 0;
+    }
+    .who-icon.a { background: linear-gradient(135deg, #FFE8D6, #F5C5A3); }
+    .who-icon.b { background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta)); }
+    .who-card-head-text { flex: 1; }
+    .who-pattern {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--terracotta);
+      letter-spacing: 0.1em;
+      margin-bottom: 2px;
+    }
+    .who-card-title {
       font-family: 'Noto Serif JP', serif;
-      font-size: 16px;
-      line-height: 1.9;
-      color: var(--terracotta-pale);
-      margin-bottom: 20px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--brown-dark);
+      line-height: 1.4;
+    }
+    .who-card-body { padding: 14px 18px 16px; }
+    .who-check-list { list-style: none; }
+    .who-check-list li {
+      font-size: 13px;
+      color: var(--brown-mid);
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      display: flex; align-items: flex-start; gap: 8px;
+      line-height: 1.6;
+    }
+    .who-check-list li:last-child { border-bottom: none; }
+    .who-check-list li::before { content: '✓'; color: var(--terracotta); font-weight: 700; flex-shrink: 0; }
+
+    .who-note {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--terracotta);
+    }
+    .who-note p { font-size: 12.5px; color: var(--text-sub); line-height: 1.75; }
+    .who-note strong { color: var(--terracotta); }
+
+    /* ========== FOR WHO v2 (combined) ========== */
+    .for-who-v2 { background: var(--cream); padding: 52px 0 40px; }
+    .ptn-inner { padding: 0 24px; }
+    .ptn-block { margin-bottom: 4px; }
+    .ptn-head {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ptn-q {
+      font-size: 11px; font-weight: 700;
+      color: var(--terracotta); letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .ptn-q::before { content: '▸'; }
+    .ptn-scene { list-style: none; margin-bottom: 20px; }
+    .ptn-scene li {
+      font-size: 13.5px; color: var(--brown-dark);
+      padding: 10px 12px; margin-bottom: 6px;
+      background: var(--white);
+      border-radius: 10px;
+      border-left: 3px solid var(--terracotta-pale);
+      line-height: 1.6;
+    }
+    .ptn-divider {
+      display: flex; align-items: center; gap: 16px;
+      padding: 28px 24px;
+    }
+    .ptn-divider-line { flex: 1; height: 1px; background: var(--border); }
+    .ptn-divider-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--terracotta-pale); }
+
+    /* Hero 3 circles */
+    .hero-circles { display: flex; gap: 8px; margin-bottom: 28px; }
+    .hero-circle {
+      flex: 1;
+      background: rgba(255,255,255,0.78);
+      border: 1.5px solid var(--terracotta-pale);
+      border-radius: 50%;
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px 6px;
+      box-shadow: 0 4px 14px rgba(181,105,75,0.12);
+      gap: 5px;
+    }
+    .hero-circle-icon { font-size: 20px; line-height: 1; }
+    .hero-circle-text { font-size: 9.5px; font-weight: 700; color: var(--brown-dark); line-height: 1.4; }
+
+    /* Persona profile */
+    .persona-profile {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px;
+      background: var(--white);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      border: 1.5px solid var(--terracotta-pale);
+    }
+    .persona-avatar {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: var(--cream-mid);
+      border: 2px solid var(--terracotta-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .persona-name { font-size: 13.5px; font-weight: 700; color: var(--brown-dark); margin-bottom: 5px; }
+    .persona-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .ptag {
+      background: var(--cream-mid); border: 1px solid var(--border);
+      border-radius: 20px; padding: 2px 8px;
+      font-size: 10.5px; color: var(--text-sub); font-weight: 500;
     }
 
-    .mission-close {
-      font-size: 14px;
-      color: rgba(255,255,255,0.65);
-      line-height: 2;
+    /* Schedule */
+    .schedule-wrap { margin-bottom: 20px; }
+    .sch-block { border-radius: 12px; padding: 15px 15px 16px; margin-bottom: 6px; }
+    .sch-block.b { background: rgba(61,43,31,0.05); border: 1.5px solid var(--border); }
+    .sch-block.a { background: rgba(181,105,75,0.06); border: 1.5px solid var(--terracotta-pale); }
+    .sch-head { font-size: 11.5px; font-weight: 700; color: var(--brown-mid); margin-bottom: 10px; letter-spacing: 0.04em; }
+    .sch-block.a .sch-head { color: var(--terracotta); }
+    .sch-item {
+      display: flex; gap: 9px;
+      padding: 5px 0;
+      border-bottom: 1px dashed rgba(224,202,184,0.5);
+      font-size: 12px; line-height: 1.55; color: var(--brown-mid);
+    }
+    .sch-item:last-child { border-bottom: none; }
+    .sch-t { font-weight: 700; color: var(--text-sub); flex-shrink: 0; min-width: 36px; font-size: 11px; }
+    .sch-item.hi .sch-ev { color: var(--terracotta); font-weight: 600; }
+    .sch-item.low { opacity: 0.65; }
+    .sch-result {
+      background: var(--terracotta); color: white;
+      border-radius: 8px; padding: 8px 12px; margin-top: 8px;
+      font-size: 12.5px; font-weight: 700; text-align: center;
+    }
+    .sch-arrow {
+      text-align: center; font-size: 12px; font-weight: 700;
+      color: var(--terracotta); padding: 8px 0; letter-spacing: 0.04em;
     }
 
     /* ========== PROBLEM ========== */
     .problem { background: var(--cream); text-align: center; }
-
-    .problem-cause {
+    .problem-root {
       background: var(--white);
       border: 2px solid var(--terracotta);
       border-radius: 16px;
-      padding: 20px;
+      padding: 20px 20px 22px;
       margin-bottom: 24px;
     }
-
-    .problem-cause-label {
-      font-size: 12px;
-      color: var(--terracotta);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
-    }
-
-    .problem-cause-main {
+    .problem-root-label { font-size: 11px; color: var(--terracotta); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 10px; }
+    .problem-root-text {
       font-family: 'Noto Serif JP', serif;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
       color: var(--brown-dark);
       line-height: 1.55;
     }
-
-    .problem-tasks {
+    .task-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 24px;
+      gap: 9px;
+      margin-bottom: 22px;
     }
-
-    .problem-task-item {
+    .task-chip {
       background: var(--white);
       border-radius: 10px;
-      padding: 14px 12px;
+      padding: 13px 10px;
       text-align: center;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 500;
       color: var(--brown-mid);
       border: 1px solid var(--border);
     }
+    .problem-close { font-size: 14px; color: var(--text-sub); line-height: 1.9; }
 
-    .problem-conclusion {
-      font-size: 14px;
-      color: var(--text-sub);
-      line-height: 1.9;
-    }
-
-    /* ========== SOLUTION ========== */
-    .solution { background: var(--white); }
-
-    .solution-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 16px;
-      margin-bottom: 10px;
-      background: var(--cream);
-      border-radius: 12px;
-    }
-
-    .solution-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta));
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-
-    .solution-item-text {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--brown-dark);
-    }
-
-    .solution-result {
-      background: linear-gradient(135deg, var(--terracotta) 0%, #8B4030 100%);
-      border-radius: 16px;
-      padding: 24px 20px;
+    /* ========== OUTSOURCING COST ========== */
+    .cost-section {
+      background: var(--brown-dark);
+      padding: 52px 24px;
       text-align: center;
-      color: white;
-      margin-top: 28px;
     }
-
-    .solution-result p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 8px;
-    }
-
-    .solution-result-main {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1.65;
-    }
-
-    /* ========== FUTURE ========== */
-    .future { background: var(--cream-mid); text-align: center; }
-
-    .future-list { list-style: none; margin-bottom: 28px; }
-
-    .future-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 16px;
-      margin-bottom: 10px;
-      background: var(--white);
-      border-radius: 14px;
-      text-align: left;
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--brown-dark);
-      box-shadow: 0 2px 8px rgba(61,43,31,0.06);
-    }
-
-    .check {
-      width: 26px;
-      height: 26px;
-      background: var(--terracotta);
-      border-radius: 50%;
+    .cost-section .section-label { color: var(--terracotta-pale); }
+    .cost-section .section-title { color: white; }
+    .cost-row {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 17px 18px;
+      margin-bottom: 9px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 13px;
-      flex-shrink: 0;
-      margin-top: 2px;
+      justify-content: space-between;
     }
-
-    .future-result {
-      background: var(--white);
-      border-left: 4px solid var(--terracotta);
-      border-radius: 0 12px 12px 0;
-      padding: 18px 20px;
-      text-align: left;
-    }
-
-    .future-result p { font-size: 13px; color: var(--text-sub); margin-bottom: 6px; }
-
-    .future-result-main {
+    .cost-name { font-size: 14px; color: rgba(255,255,255,0.72); }
+    .cost-price {
       font-family: 'Noto Serif JP', serif;
       font-size: 17px;
       font-weight: 700;
-      color: var(--terracotta);
-      line-height: 1.6;
+      color: var(--terracotta-pale);
+      text-align: right;
     }
-
-    /* ========== CORE MESSAGE ========== */
-    .core-msg {
-      background: var(--brown-dark);
-      text-align: center;
-      padding: 52px 28px;
+    .cost-price span {
+      display: block;
+      font-size: 10.5px;
+      color: rgba(255,255,255,0.4);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 400;
     }
-
-    .core-msg-sub {
-      color: rgba(255,255,255,0.6);
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      margin-bottom: 16px;
+    .cost-conclusion {
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(181,105,75,0.2);
+      border: 1px solid rgba(181,105,75,0.38);
+      border-radius: 14px;
     }
-
-    .core-msg-main {
+    .cost-conclusion-main {
       font-family: 'Noto Serif JP', serif;
       font-size: 18px;
       font-weight: 700;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.8;
-      margin-bottom: 24px;
+      color: var(--terracotta-pale);
+      margin-bottom: 8px;
     }
+    .cost-conclusion-sub { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.8; }
 
-    .core-msg-highlight {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta));
-      color: white;
-      font-family: 'Noto Serif JP', serif;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.65;
-      padding: 20px 28px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(181, 105, 75, 0.4);
+    /* ========== SOLUTION ========== */
+    .solution { background: var(--white); }
+    .sol-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px 16px;
+      margin-bottom: 9px;
+      background: var(--cream);
+      border-radius: 12px;
     }
+    .sol-icon {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .sol-body { flex: 1; }
+    .sol-title { font-size: 14px; font-weight: 700; color: var(--brown-dark); }
+    .sol-detail { font-size: 11.5px; color: var(--text-sub); margin-top: 2px; }
+    .sol-tag {
+      background: var(--terracotta);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .sol-result {
+      background: linear-gradient(135deg, var(--terracotta), #8B4030);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      color: white;
+      margin-top: 24px;
+    }
+    .sol-result-label { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 8px; }
+    .sol-result-main { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; line-height: 1.65; }
+
+    /* ========== OUTPUT ========== */
+    .output { background: var(--cream-mid); padding: 52px 20px; }
+    .output-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .output-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(61,43,31,0.08);
+    }
+    .output-thumb {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+    }
+    .ot-sns  { background: linear-gradient(135deg, #f8a5c2, #f0b27a); }
+    .ot-lp   { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+    .ot-notion { background: linear-gradient(135deg, #2d3436, #636e72); }
+    .ot-design { background: linear-gradient(135deg, #00cec9, #00b894); }
+    .output-info { padding: 10px 12px 12px; }
+    .output-title { font-size: 12.5px; font-weight: 700; color: var(--brown-dark); margin-bottom: 2px; }
+    .output-desc { font-size: 11px; color: var(--text-sub); line-height: 1.5; }
+    .output-cta {
+      text-align: center;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 16px;
+      border: 2px solid var(--terracotta-pale);
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--brown-dark);
+      line-height: 1.7;
+    }
+    .output-cta span { color: var(--terracotta); }
 
     /* ========== FEATURES ========== */
     .features { background: var(--white); }
-
     .feature-card {
       background: var(--cream);
       border-radius: 16px;
-      padding: 24px 20px;
-      margin-bottom: 14px;
+      padding: 22px 20px;
+      margin-bottom: 12px;
       position: relative;
       overflow: hidden;
     }
-
     .feature-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
-      width: 4px;
-      height: 100%;
+      width: 4px; height: 100%;
       background: linear-gradient(180deg, var(--terracotta-light), var(--terracotta));
       border-radius: 4px 0 0 4px;
     }
-
-    .feature-num {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
+    .feature-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
     .feature-num-circle {
-      width: 32px;
-      height: 32px;
+      width: 30px; height: 30px;
       background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta));
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 12px; font-weight: 700; flex-shrink: 0;
+    }
+    .feature-name { font-size: 15px; font-weight: 700; color: var(--brown-dark); line-height: 1.4; }
+    .feature-body { font-size: 13px; color: var(--text-sub); line-height: 1.8; margin-bottom: 10px; }
+    .feature-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .feature-tag {
+      background: rgba(181,105,75,0.1);
+      border: 1px solid var(--terracotta-pale);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 11px;
       font-weight: 700;
-    }
-
-    .feature-num-label {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--brown-dark);
-    }
-
-    .feature-desc {
-      font-size: 13.5px;
-      color: var(--text-sub);
-      line-height: 1.8;
-    }
-
-    .feature-arrow {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px dashed var(--border);
-    }
-
-    .feature-arrow-label {
-      font-size: 12px;
       color: var(--terracotta);
-      font-weight: 700;
-    }
-
-    .feature-arrow-text {
-      font-size: 13px;
-      color: var(--brown-mid);
-      font-weight: 500;
     }
 
     /* ========== CURRICULUM ========== */
     .curriculum { background: var(--cream-mid); }
-
     .curriculum-meta {
       background: var(--white);
       border-radius: 12px;
@@ -624,369 +732,316 @@
       margin-bottom: 20px;
       border: 1px solid var(--border);
     }
+    .curriculum-meta-main { font-family: 'Noto Serif JP', serif; font-size: 20px; font-weight: 700; color: var(--terracotta); }
+    .curriculum-meta-sub { font-size: 12.5px; color: var(--text-sub); margin-top: 4px; }
 
-    .curriculum-meta-main {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--terracotta);
+    .chapter { background: var(--white); border-radius: 14px; margin-bottom: 10px; overflow: hidden; }
+    .chapter-head {
+      display: flex; align-items: center; gap: 13px;
+      padding: 15px 17px;
     }
-
-    .curriculum-meta-sub { font-size: 13px; color: var(--text-sub); margin-top: 4px; }
-
-    .chapter-list { list-style: none; }
-
-    .chapter-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 18px;
-      margin-bottom: 8px;
-      background: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(61,43,31,0.05);
-    }
-
     .chapter-num {
-      width: 36px;
-      height: 36px;
-      background: var(--cream-deep);
+      width: 35px; height: 35px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--terracotta);
-      font-size: 13px;
-      font-weight: 700;
-      flex-shrink: 0;
+      background: var(--cream-deep);
       border: 1.5px solid var(--terracotta-pale);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--terracotta); font-size: 12.5px; font-weight: 700; flex-shrink: 0;
     }
-
-    .chapter-title {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--brown-dark);
-      flex: 1;
-    }
-
+    .chapter-title { font-size: 14px; font-weight: 700; color: var(--brown-dark); flex: 1; }
     .chapter-badge {
-      background: var(--terracotta);
-      color: white;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 20px;
-      white-space: nowrap;
+      background: var(--terracotta); color: white;
+      font-size: 10px; font-weight: 700;
+      padding: 3px 8px; border-radius: 20px; white-space: nowrap;
     }
+    .chapter-body {
+      padding: 0 17px 15px 65px;
+      border-top: 1px dashed var(--border);
+      padding-top: 12px;
+    }
+    .chapter-body ul { list-style: none; }
+    .chapter-body li {
+      font-size: 12px; color: var(--text-sub);
+      padding: 4px 0;
+      display: flex; gap: 7px; line-height: 1.65;
+      border-bottom: 1px solid rgba(224,202,184,0.4);
+    }
+    .chapter-body li:last-child { border-bottom: none; }
+    .chapter-body li::before { content: '–'; color: var(--terracotta-pale); font-weight: 700; flex-shrink: 0; }
 
     .curriculum-note {
-      margin-top: 20px;
-      padding: 16px;
+      margin-top: 16px;
+      padding: 15px 16px;
       background: var(--white);
       border-radius: 12px;
       border-left: 4px solid var(--terracotta);
     }
-
-    .curriculum-note p { font-size: 13px; color: var(--text-sub); line-height: 1.8; }
+    .curriculum-note p { font-size: 12.5px; color: var(--text-sub); line-height: 1.8; }
     .curriculum-note strong { color: var(--terracotta); }
 
     /* ========== BONUS ========== */
     .bonus {
       background: linear-gradient(160deg, #2D1E14 0%, #4A2D1C 100%);
-      text-align: center;
       padding: 52px 20px;
+      text-align: center;
     }
-
     .bonus .section-label { color: var(--terracotta-pale); }
-
-    .bonus-headline {
+    .bonus-hl {
       font-family: 'Noto Serif JP', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: white;
-      line-height: 1.5;
-      margin-bottom: 6px;
+      font-size: 22px; font-weight: 700;
+      color: white; line-height: 1.5; margin-bottom: 8px;
     }
+    .bonus-hl span { color: var(--accent-gold); }
+    .bonus-tagline { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 28px; line-height: 1.8; }
 
-    .bonus-headline span { color: var(--accent-gold); }
-
-    .bonus-tagline {
-      font-size: 13px;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 28px;
-      line-height: 1.8;
+    .bonus-divider {
+      display: flex; align-items: center; gap: 10px; margin: 20px 0 14px;
     }
-
-    /* Category label */
-    .bonus-cat {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 20px 0 12px;
+    .bonus-divider-line { flex: 1; height: 1px; background: rgba(255,255,255,0.14); }
+    .bonus-divider-label {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.45); white-space: nowrap;
     }
+    .bonus-divider-label.gold { color: var(--accent-gold); }
 
-    .bonus-cat-line {
-      flex: 1;
-      height: 1px;
-      background: rgba(255,255,255,0.15);
-    }
-
-    .bonus-cat-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: rgba(255,255,255,0.5);
-      white-space: nowrap;
-    }
-
-    .bonus-cat-label.exclusive {
-      color: var(--accent-gold);
-    }
-
-    /* Gift cards */
-    .gift-card {
+    /* ギフトカード（正方形画像プレースホルダー付き） */
+    .gift {
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 14px;
-      padding: 16px 16px;
-      margin-bottom: 10px;
+      margin-bottom: 11px;
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 14px;
+      padding: 14px;
       text-align: left;
     }
-
-    .gift-card.exclusive {
-      background: rgba(201,169,110,0.1);
+    .gift.ex {
+      background: rgba(201,169,110,0.08);
       border-color: rgba(201,169,110,0.25);
     }
 
-    .gift-num-wrap {
+    /* 正方形画像プレースホルダー */
+    .gift-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
       flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+      background: rgba(255,255,255,0.1);
+      border: 1.5px dashed rgba(255,255,255,0.25);
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 4px;
     }
-
-    .gift-emoji {
-      font-size: 26px;
-      line-height: 1;
+    .gift.ex .gift-img {
+      background: rgba(201,169,110,0.12);
+      border-color: rgba(201,169,110,0.35);
     }
-
-    .gift-num {
+    .gift-img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none; /* 画像挿入時に display:block へ */
+    }
+    .gift-img-placeholder-icon { font-size: 24px; opacity: 0.45; }
+    .gift-img-placeholder-text {
       font-size: 9px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.05em;
       font-weight: 700;
-      letter-spacing: 0.08em;
-      color: rgba(255,255,255,0.4);
     }
-
-    .gift-card.exclusive .gift-num { color: var(--accent-gold); }
+    .gift.ex .gift-img-placeholder-text { color: rgba(201,169,110,0.55); }
 
     .gift-body { flex: 1; min-width: 0; }
-
-    .gift-title {
-      font-size: 13.5px;
-      font-weight: 700;
-      color: white;
-      line-height: 1.45;
-      margin-bottom: 4px;
+    .gift-num-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35); margin-bottom: 4px;
     }
-
-    .gift-card.exclusive .gift-title { color: #FFE8C8; }
-
-    .gift-desc {
-      font-size: 11.5px;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.7;
-    }
-
-    .gift-card.exclusive .gift-desc { color: rgba(255,220,160,0.7); }
+    .gift.ex .gift-num-label { color: var(--accent-gold); }
+    .gift-title { font-size: 13.5px; font-weight: 700; color: white; line-height: 1.4; margin-bottom: 5px; }
+    .gift.ex .gift-title { color: #FFE8C8; }
+    .gift-desc { font-size: 11.5px; color: rgba(255,255,255,0.52); line-height: 1.65; }
+    .gift.ex .gift-desc { color: rgba(255,218,155,0.65); }
 
     /* ========== PRICE ========== */
     .price { background: var(--white); text-align: center; }
-
     .price-card {
       background: var(--cream);
       border-radius: 20px;
-      padding: 32px 24px;
+      padding: 30px 22px 28px;
       border: 2px solid var(--border);
       position: relative;
       overflow: hidden;
     }
-
     .price-card::before {
       content: '期間限定価格';
       position: absolute;
-      top: 18px; right: -30px;
+      top: 17px; right: -30px;
       background: var(--terracotta);
-      color: white;
-      font-size: 10.5px;
-      font-weight: 700;
+      color: white; font-size: 10px; font-weight: 700;
       padding: 5px 40px;
       transform: rotate(35deg);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
     }
-
-    .price-normal { font-size: 14px; color: var(--text-sub); margin-bottom: 4px; }
-
-    .price-normal-value {
-      font-size: 18px;
-      text-decoration: line-through;
-      color: var(--text-sub);
-      margin-bottom: 16px;
-    }
-
-    .price-divider {
-      width: 60px; height: 1px;
-      background: var(--border);
-      margin: 16px auto;
-    }
-
-    .price-limit-badge {
+    .price-normal { font-size: 13px; color: var(--text-sub); margin-bottom: 3px; }
+    .price-normal-val { font-size: 17px; text-decoration: line-through; color: var(--text-sub); margin-bottom: 14px; }
+    .price-divider { width: 50px; height: 1px; background: var(--border); margin: 12px auto; }
+    .price-badge {
       display: inline-block;
-      background: var(--terracotta);
-      color: white;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 5px 16px;
-      border-radius: 20px;
-      margin-bottom: 12px;
+      background: var(--terracotta); color: white;
+      font-size: 11.5px; font-weight: 700;
+      padding: 4px 14px; border-radius: 20px; margin-bottom: 10px;
     }
-
-    .price-special {
+    .price-main {
       font-family: 'Noto Serif JP', serif;
-      font-size: 44px;
-      font-weight: 700;
-      color: var(--terracotta);
-      line-height: 1;
-      margin-bottom: 4px;
+      font-size: 64px; font-weight: 700;
+      color: var(--terracotta); line-height: 1; margin-bottom: 4px;
     }
-
-    .price-special-sub {
-      font-size: 13px;
-      color: var(--text-sub);
-      margin-bottom: 20px;
-    }
-
+    .price-tax { font-size: 12.5px; color: var(--text-sub); margin-bottom: 10px; }
     .price-save {
       display: inline-block;
       background: #FFF3EE;
       border: 1px solid var(--terracotta-pale);
       border-radius: 8px;
-      padding: 8px 16px;
+      padding: 7px 14px;
+      font-size: 12.5px; color: var(--terracotta); font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .price-outsource {
+      background: rgba(181,105,75,0.08);
+      border: 1.5px solid var(--terracotta-pale);
+      border-radius: 10px;
+      padding: 11px 14px;
+      margin-bottom: 20px;
       font-size: 13px;
       color: var(--terracotta);
       font-weight: 700;
-      margin-bottom: 28px;
+      line-height: 1.6;
     }
 
-    /* ========== WHO ========== */
-    .who { background: var(--cream-mid); }
-
-    .who-list { list-style: none; }
-
-    .who-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 16px;
-      margin-bottom: 10px;
-      background: var(--white);
-      border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(61,43,31,0.05);
+    /* ========== FOR YOU ========== */
+    .for-you { background: var(--cream-mid); }
+    .for-you-list { list-style: none; }
+    .for-you-item {
+      display: flex; align-items: flex-start; gap: 11px;
+      padding: 15px; margin-bottom: 9px;
+      background: var(--white); border-radius: 13px;
+      box-shadow: 0 2px 7px rgba(61,43,31,0.05);
     }
-
-    .who-dot {
-      width: 8px; height: 8px;
-      background: var(--terracotta);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 8px;
+    .for-you-dot {
+      width: 7px; height: 7px;
+      background: var(--terracotta); border-radius: 50%;
+      flex-shrink: 0; margin-top: 8px;
     }
-
-    .who-text { font-size: 14.5px; color: var(--brown-dark); line-height: 1.65; }
+    .for-you-text { font-size: 14px; color: var(--brown-dark); line-height: 1.65; }
 
     /* ========== FINAL MESSAGE ========== */
-    .final-msg {
-      background: var(--white);
-      text-align: center;
-      padding: 52px 28px;
-    }
+    .final { background: var(--white); text-align: center; padding: 52px 26px; }
 
-    .final-intro {
+    /* なぜこの講座をつくったのか */
+    .why-story {
+      background: linear-gradient(155deg, #FAF0E6 0%, #F5E8DC 100%);
+      border-radius: 18px;
+      padding: 26px 22px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+    .why-story-eyebrow {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; color: var(--terracotta);
+      letter-spacing: 0.12em; margin-bottom: 14px;
+    }
+    .why-story-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px; font-weight: 700;
+      color: var(--brown-dark); line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .why-story-body {
+      font-size: 13.5px; color: var(--brown-mid);
+      line-height: 2.0;
+    }
+    .why-story-body strong { color: var(--brown-dark); font-weight: 700; }
+    .why-story-body .hl { color: var(--terracotta); font-weight: 700; }
+    .why-story-num {
+      display: inline-block;
+      background: var(--terracotta); color: white;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px; font-weight: 700;
+      padding: 2px 10px; border-radius: 5px;
+      margin: 2px 0;
+    }
+    .why-story-close {
+      margin-top: 18px;
+      font-family: 'Noto Serif JP', serif;
       font-size: 14px;
-      color: var(--text-sub);
-      line-height: 2.1;
-      margin-bottom: 28px;
+      color: var(--brown-dark);
+      line-height: 2.0;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
     }
 
     .final-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 18px 20px;
-      margin-bottom: 12px;
-      background: var(--cream);
-      border-radius: 14px;
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 17px 18px; margin-bottom: 10px;
+      background: var(--cream); border-radius: 13px; text-align: left;
+    }
+    .final-arrow { color: var(--terracotta); font-size: 15px; flex-shrink: 0; margin-top: 3px; }
+    .final-text { font-size: 14.5px; font-weight: 500; color: var(--brown-dark); line-height: 1.7; }
+
+    /* AIへの安心感 */
+    .ai-ease {
+      background: var(--cream-mid);
+      border-radius: 16px;
+      padding: 22px 20px;
+      margin: 20px 0;
       text-align: left;
     }
-
-    .final-point-arrow {
-      color: var(--terracotta);
-      font-size: 16px;
-      flex-shrink: 0;
-      margin-top: 3px;
+    .ai-ease-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 14.5px; font-weight: 700;
+      color: var(--brown-dark); margin-bottom: 14px; text-align: center;
     }
-
-    .final-point-text {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--brown-dark);
-      line-height: 1.7;
+    .ai-ease-item {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 13px; color: var(--brown-mid);
+      margin-bottom: 8px; line-height: 1.65;
     }
+    .ai-ease-item::before { content: '💙'; flex-shrink: 0; font-size: 13px; }
 
     .final-close {
       margin-top: 28px;
       font-family: 'Noto Serif JP', serif;
-      font-size: 16px;
-      color: var(--brown-mid);
-      line-height: 2.1;
-      margin-bottom: 32px;
+      font-size: 16px; color: var(--brown-mid);
+      line-height: 2.1; margin-bottom: 32px;
     }
 
     /* ========== CTA ========== */
-    .cta-section {
+    .cta {
       background: linear-gradient(160deg, #3D2B1F 0%, #5A3A28 100%);
       padding: 48px 24px;
       text-align: center;
     }
-
-    .cta-section h2 {
+    .cta h2 {
       font-family: 'Noto Serif JP', serif;
-      color: white;
-      font-size: 18px;
-      line-height: 1.75;
-      margin-bottom: 28px;
-      font-weight: 700;
+      color: white; font-size: 18px;
+      line-height: 1.75; margin-bottom: 26px; font-weight: 700;
     }
-
-    .cta-section h2 span { color: var(--terracotta-pale); }
-
-    .cta-limit {
-      color: rgba(255,255,255,0.5);
-      font-size: 11px;
-      margin-top: 14px;
-      letter-spacing: 0.04em;
-      line-height: 1.8;
-    }
+    .cta h2 span { color: var(--terracotta-pale); }
+    .cta-note { color: rgba(255,255,255,0.45); font-size: 11px; margin-top: 14px; line-height: 1.8; }
 
     /* ========== FOOTER ========== */
     footer {
       background: #2A1C11;
       padding: 24px;
       text-align: center;
-      color: rgba(255,255,255,0.38);
+      color: rgba(255,255,255,0.35);
       font-size: 11px;
       line-height: 2;
     }
@@ -994,135 +1049,259 @@
 </head>
 <body>
 
+
+
   <!-- ========== HERO ========== -->
   <section class="hero">
-    <div>
-      <span class="hero-top-badge">副業・起業女性のためのAI講座</span>
+    <span class="hero-eyebrow">副業・起業女性のためのAI講座</span>
+
+    <p class="hero-hook">
+      やりたいことがあるのに、
+    </p>
+    <h1 class="hero-main">
+      やることが多すぎて<br>
+      <em>進めないあなたへ。</em>
+    </h1>
+
+    <div class="hero-sub">
+      <strong>「やらなくていい仕事」</strong>を手放して<br>
+      （SNS・事務・制作・経理など）<br>
+      あなたにしかできない仕事に集中できる<br>働き方へ。
     </div>
 
-    <div class="hero-two-col">
-      <div class="hero-copy-col">
-        <p class="hero-sub">
-          やりたい気持ちがあるのに、<br>
-          時間やお金の壁で<br>
-          諦めてほしくない。<br><br>
-          <span class="accent">「自分じゃなくてもいい仕事」</span><br>
-          を手放し、あなたにしか<br>
-          できないことに集中できる<br>
-          働き方へ。
-        </p>
+    <div class="hero-circles">
+      <div class="hero-circle">
+        <span class="hero-circle-icon">📚</span>
+        <span class="hero-circle-text">コンテンツの量<br>たっぷり</span>
+      </div>
+      <div class="hero-circle">
+        <span class="hero-circle-icon">🎯</span>
+        <span class="hero-circle-text">副業・起業に役立つAI活用を完全網羅</span>
+      </div>
+      <div class="hero-circle">
+        <span class="hero-circle-icon">🔄</span>
+        <span class="hero-circle-text">追加料金なし・常に最新情報へアップデート</span>
       </div>
     </div>
 
-    <h1 class="hero-main-title">
-      副業・起業女性のための<br>AI完全活用教科書
-    </h1>
-    <p class="hero-main-title-en">AI Complete Guide for Women in Business</p>
-
     <div style="text-align:center; margin-bottom:16px;">
-      <span class="hero-limit-badge">
-        <span class="star">★</span> 300名限定 先行価格
-      </span>
+      <span class="hero-limit-badge">★ 300名限定 先行価格</span>
     </div>
 
     <a href="#apply" class="btn-primary">
-      先行価格で今すぐ申し込む <span class="btn-arrow">▶</span>
+      先行価格で今すぐ申し込む →
     </a>
     <p class="hero-note">＊ 先行価格は定員に達し次第終了します</p>
   </section>
 
 
-  <!-- ========== EMPATHY ========== -->
-  <section class="empathy">
-    <div style="text-align:center; margin-bottom:28px;">
-      <span class="section-label">EMPATHY</span>
+  <!-- ========== FOR WHO + EMPATHY + BEFORE/AFTER ========== -->
+  <section class="for-who-v2">
+
+    <div class="ptn-inner" style="text-align:center; margin-bottom:28px;">
+      <span class="section-label">FOR WHO</span>
       <h2 class="section-title" style="text-align:center;">
-        こんな経験<br><span>ありませんか？</span>
+        あなたは<br><span>どちらですか？</span>
       </h2>
       <div class="divider"></div>
     </div>
 
-    <ul class="pain-list">
-      <li>副業や起業に挑戦したけど、<br>時間が足りず続かなかった</li>
-      <li>外注したいけど、コストや管理が不安で<br>結局自分で抱えている</li>
-      <li>やりたいことより、作業に追われて<br>疲れてしまった</li>
-    </ul>
 
-    <div class="empathy-voice">
-      <p>本当は</p>
-      <p class="voice-wish">もっと自由に働きたかった</p>
-      <p class="voice-wish">もっと自分の価値を発揮したかった</p>
-    </div>
+    <!-- ===== PATTERN 01: 初心者 ===== -->
+    <div class="ptn-block">
+      <div class="ptn-inner">
+        <div class="who-pattern" style="margin-bottom:10px;">PATTERN 01</div>
+        <div class="persona-profile">
+          <div class="persona-avatar">👩</div>
+          <div>
+            <div class="persona-name">Aさん｜32歳・会社員</div>
+            <div class="persona-tags">
+              <span class="ptag">子ども2人</span>
+              <span class="ptag">副業を始めたい</span>
+              <span class="ptag">AI初心者</span>
+            </div>
+          </div>
+        </div>
 
-    <div class="empathy-result">
-      <p>それなのに…</p>
-      <div class="result-text">
-        「余裕がない」ことで<br>諦めてしまう
+        <p class="ptn-q" style="margin-bottom:12px;">Aさんの今日のスケジュール</p>
+        <div class="schedule-wrap">
+          <div class="sch-block b">
+            <div class="sch-head">😔 受講前 — 「やりたいのに動けない毎日」</div>
+            <div class="sch-item"><span class="sch-t">07:00</span><span class="sch-ev">朝食・子ども2人の支度</span></div>
+            <div class="sch-item"><span class="sch-t">08:30</span><span class="sch-ev">出社・仕事</span></div>
+            <div class="sch-item"><span class="sch-t">18:00</span><span class="sch-ev">帰宅・夕食・お風呂・寝かしつけ</span></div>
+            <div class="sch-item hi"><span class="sch-t">22:00</span><span class="sch-ev">「副業やりたいけど…何から始めれば？」→ 結局スマホを見て終わる</span></div>
+            <div class="sch-item low"><span class="sch-t">23:00</span><span class="sch-ev">疲れて就寝</span></div>
+          </div>
+          <div class="sch-arrow">▼ 受講後</div>
+          <div class="sch-block a">
+            <div class="sch-head">✨ 受講後 — 「隙間時間で副業が動き出した」</div>
+            <div class="sch-item"><span class="sch-t">07:00</span><span class="sch-ev">朝食・支度（変わらず）</span></div>
+            <div class="sch-item"><span class="sch-t">08:00</span><span class="sch-ev">通勤中にAIで今日のSNS投稿を作成（5分）</span></div>
+            <div class="sch-item"><span class="sch-t">18:00</span><span class="sch-ev">帰宅・夕食・家族時間</span></div>
+            <div class="sch-item hi"><span class="sch-t">21:30</span><span class="sch-ev">AIと30分だけ作業→ LP・集客・返信を一気に完了</span></div>
+            <div class="sch-item"><span class="sch-t">22:00</span><span class="sch-ev">余裕で就寝 😊</span></div>
+            <div class="sch-result">隙間時間だけで副業がスタートできた！</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ba-before before">
+        <div class="ba-title">今のあなた <span>😔</span></div>
+        <div class="ba-rule"></div>
+        <div class="ba-grid">
+          <div class="thought">行動できないまま<br>時間が過ぎていく</div>
+          <div class="thought">AIは難しそう<br><span class="num">自分には無理…</span></div>
+          <div class="thought">何から始めれば<br><span class="num">いいかわからない</span></div>
+          <div class="thought">気づけば<br><span class="num">何ヶ月も経っていた</span></div>
+        </div>
+      </div>
+
+      <div class="ba-after after">
+        <div class="ba-title">受講後のあなた <span>✨</span></div>
+        <div class="ba-rule"></div>
+        <div class="ba-grid">
+          <div class="thought">初期設定も<br><span class="num">迷わずできた</span></div>
+          <div class="thought">AIが毎日の<br><span class="num">頼もしい相棒に</span></div>
+          <div class="thought">隙間時間で<br><span class="num">副業が動き出した</span></div>
+          <div class="thought">「意外と<br><span class="num">できた！」が増えた</span></div>
+        </div>
+        <div class="ba-note">
+          「私でもできた」が
+          <strong>自信と次の一歩につながります ✨</strong>
+        </div>
       </div>
     </div>
-  </section>
 
 
-  <!-- ========== MISSION ========== -->
-  <section class="mission">
-    <span class="section-label">OUR MISSION</span>
-    <h2 class="section-title" style="text-align:center; margin-bottom:24px;">
-      私たちの想い
-    </h2>
-    <div class="divider" style="background:var(--terracotta-pale);"></div>
-
-    <p class="mission-body">
-      これまで<br>
-      時間や外注リソースがないことで<br>
-      挑戦を諦めてしまう女性を<br>
-      たくさん見てきました。
-    </p>
-
-    <div class="mission-highlight">
-      起業や副業は本来、<br>
-      誰かの役に立ち、<br>
-      自分も満たされるもののはず
+    <!-- パターン区切り -->
+    <div class="ptn-divider">
+      <div class="ptn-divider-line"></div>
+      <div class="ptn-divider-dot"></div>
+      <div class="ptn-divider-line"></div>
     </div>
 
-    <p class="mission-close">
-      それが"忙しさ"で苦しくなるのは、<br>
-      本当にもったいないことです。<br><br>
-      だから私たちは、<br>
-      その壁を壊す方法を作りました。
-    </p>
+
+    <!-- ===== PATTERN 02: 経験者 ===== -->
+    <div class="ptn-block">
+      <div class="ptn-inner">
+        <div class="who-pattern" style="margin-bottom:10px;">PATTERN 02</div>
+        <div class="persona-profile">
+          <div class="persona-avatar">👩‍💼</div>
+          <div>
+            <div class="persona-name">Bさん｜35歳・フリーランス</div>
+            <div class="persona-tags">
+              <span class="ptag">子ども1人</span>
+              <span class="ptag">すでに副業中</span>
+              <span class="ptag">時間が足りない</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="ptn-q" style="margin-bottom:12px;">Bさんの今日のスケジュール</p>
+        <div class="schedule-wrap">
+          <div class="sch-block b">
+            <div class="sch-head">😂 受講前 — 「もう限界」が口癖だった</div>
+            <div class="sch-item"><span class="sch-t">09:00</span><span class="sch-ev">仕事開始・クライアント対応</span></div>
+            <div class="sch-item hi"><span class="sch-t">11:00</span><span class="sch-ev">SNS投稿を1本作るのに1時間以上かかる</span></div>
+            <div class="sch-item"><span class="sch-t">15:00</span><span class="sch-ev">子どものお迎え・夕食準備</span></div>
+            <div class="sch-item"><span class="sch-t">21:00</span><span class="sch-ev">寝かしつけ後に副業の作業再開</span></div>
+            <div class="sch-item hi"><span class="sch-t">23:30</span><span class="sch-ev">経理・デザイン・LP…「これ全部私が？」→ 深夜まで作業</span></div>
+          </div>
+          <div class="sch-arrow">▼ 受講後</div>
+          <div class="sch-block a">
+            <div class="sch-head">😏 受講後 — 仕事時間が週5時間以上減った</div>
+            <div class="sch-item"><span class="sch-t">09:00</span><span class="sch-ev">仕事開始</span></div>
+            <div class="sch-item hi"><span class="sch-t">09:15</span><span class="sch-ev">AIで今週分のSNS投稿を15分で一気に作成完了</span></div>
+            <div class="sch-item"><span class="sch-t">15:00</span><span class="sch-ev">子どものお迎え・家族時間</span></div>
+            <div class="sch-item hi"><span class="sch-t">21:00</span><span class="sch-ev">AIに経理・LP・返信を任せて30分で作業終了</span></div>
+            <div class="sch-item"><span class="sch-t">21:30</span><span class="sch-ev">好きなことをして余裕で就寝 🌙</span></div>
+            <div class="sch-result">作業時間−5時間／週、売上はそのまま維持！</div>
+          </div>
+        </div>
+
+        <div class="task-overflow">
+          <p class="task-overflow-label">毎日こなさなきゃいけないこと…</p>
+          <div class="task-tags">
+            <span class="task-tag">📱 SNS</span>
+            <span class="task-tag">📋 経理</span>
+            <span class="task-tag">🎨 デザイン</span>
+            <span class="task-tag">📄 LP作成</span>
+            <span class="task-tag">✉️ 顧客対応</span>
+            <span class="task-tag">📊 分析</span>
+            <span class="task-tag">🖋️ ライティング</span>
+            <span class="task-tag">📁 事務</span>
+            <span class="task-tag">🎥 動画</span>
+          </div>
+          <p class="task-overflow-comment">「これ全部、私がやるの…？」</p>
+        </div>
+      </div>
+
+      <div class="ba-before before">
+        <div class="ba-title">今のあなた <span>😂</span></div>
+        <div class="ba-rule"></div>
+        <div class="ba-grid">
+          <div class="thought">やることが多すぎて<br><span class="num">時間がない</span></div>
+          <div class="thought">家事も育児も<br><span class="num">もう限界！</span></div>
+          <div class="thought">苦手なタスクに<br>追われる日々</div>
+          <div class="thought">自分が<br><span class="num">もう1人欲しい</span></div>
+        </div>
+        <div class="ba-note">😂 「もう限界」が口癖だった…</div>
+      </div>
+
+      <div class="ba-after after">
+        <div class="ba-title">受講後のあなた <span>😏</span></div>
+        <div class="ba-rule"></div>
+        <div class="ba-grid">
+          <div class="thought">苦手な作業<br><span class="num">しなくていい！</span></div>
+          <div class="thought">仕事時間<br><span class="num">−5時間</span></div>
+          <div class="thought">作業効率<br><span class="num">10倍アップ</span></div>
+          <div class="thought">家族時間が<br><span class="num">増えた</span></div>
+        </div>
+        <div class="ba-note">
+          何よりも心に余裕ができて
+          <strong>仕事も暮らしも豊かになりました 🌿</strong>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="ptn-inner" style="padding-top:24px; padding-bottom:8px;">
+      <div class="who-note">
+        <p>「AI＝難しい、男性的でワクワクしない」<br>
+        <strong>そう思っていた方にこそ、届けたい講座です。</strong></p>
+      </div>
+    </div>
+
   </section>
 
 
   <!-- ========== PROBLEM ========== -->
   <section class="problem">
-    <span class="section-label" style="display:block; text-align:center;">THE PROBLEM</span>
+    <span class="section-label" style="text-align:center;">THE PROBLEM</span>
     <h2 class="section-title" style="text-align:center; margin-bottom:8px;">
-      うまくいかない理由は
+      うまくいかないのは<br>あなたのせいじゃない
     </h2>
-    <p style="font-size:15px; color:var(--text-sub); text-align:center; margin-bottom:24px;">
+    <p style="font-size:14px; color:var(--text-sub); text-align:center; margin-bottom:24px;">
       能力でも、努力でもありません。
     </p>
     <div class="divider"></div>
 
-    <div class="problem-cause">
-      <p class="problem-cause-label">本当の問題</p>
-      <p class="problem-cause-main">
-        「全部自分でやろうとしてしまう構造」
-      </p>
+    <div class="problem-root">
+      <p class="problem-root-label">本当の問題</p>
+      <p class="problem-root-text">「1人で全部やる前提に<br>なっていること」</p>
     </div>
 
     <p style="font-size:13px; color:var(--text-sub); text-align:center; margin-bottom:14px;">
-      本来あなたがやるべきではない仕事…
+      本来、あなたがやらなくていい仕事…
     </p>
-
-    <div class="problem-tasks">
-      <div class="problem-task-item">📱 SNS</div>
-      <div class="problem-task-item">📋 事務</div>
-      <div class="problem-task-item">🎨 制作</div>
-      <div class="problem-task-item">⚙️ 細かい作業</div>
+    <div class="task-grid">
+      <div class="task-chip">📱 SNS</div>
+      <div class="task-chip">📋 事務</div>
+      <div class="task-chip">🎨 制作</div>
+      <div class="task-chip">⚙️ 細かい作業</div>
     </div>
-
-    <p class="problem-conclusion">
+    <p class="problem-close">
       これらに時間を奪われることで、<br>
       <strong style="color:var(--terracotta);">あなた本来の価値を発揮できない</strong><br>
       状態になっています。
@@ -1130,165 +1309,192 @@
   </section>
 
 
+  <!-- ========== OUTSOURCING COST ========== -->
+  <section class="cost-section">
+    <span class="section-label">REALITY CHECK</span>
+    <h2 class="section-title" style="text-align:center; margin-bottom:10px;">
+      「じゃあ外注すればいい」<br>と思いますよね。
+    </h2>
+    <p style="font-size:13px; color:rgba(255,255,255,0.52); text-align:center; margin-bottom:26px; line-height:1.8;">
+      でも、現実はこうです。
+    </p>
+    <div class="divider" style="background:var(--terracotta-pale);"></div>
+
+    <div class="cost-row">
+      <div class="cost-name">📱 SNS運用代行</div>
+      <div class="cost-price">月10〜15万円<span>月額・継続費用</span></div>
+    </div>
+    <div class="cost-row">
+      <div class="cost-name">📄 LP制作</div>
+      <div class="cost-price">30万円〜<span>1ページあたり</span></div>
+    </div>
+    <div class="cost-row">
+      <div class="cost-name">🎨 デザイン制作</div>
+      <div class="cost-price">数万円〜<span>1案件あたり</span></div>
+    </div>
+
+    <div class="cost-conclusion">
+      <div class="cost-conclusion-main">「これは…無理です」</div>
+      <div class="cost-conclusion-sub">
+        だから、自分でできるようになるしかない。<br>
+        そしてAIがあれば、それができます。
+      </div>
+    </div>
+  </section>
+
+
   <!-- ========== SOLUTION ========== -->
   <section class="solution">
-    <div style="text-align:center; margin-bottom:28px;">
+    <div style="text-align:center; margin-bottom:26px;">
       <span class="section-label">THE SOLUTION</span>
-      <h2 class="section-title">
-        だからこの講座では<br>
-        <span>Claudeを使って</span>
+      <h2 class="section-title" style="text-align:center;">
+        AIを使えば<br><span>こう変わります</span>
       </h2>
       <div class="divider"></div>
     </div>
 
-    <div class="solution-item">
-      <div class="solution-icon">⚡</div>
-      <div class="solution-item-text">日常業務を自動化</div>
+    <div class="sol-item">
+      <div class="sol-icon">📣</div>
+      <div class="sol-body">
+        <div class="sol-title">SNS投稿を作る</div>
+        <div class="sol-detail">1本のコンテンツが</div>
+      </div>
+      <div class="sol-tag">10分で完成</div>
     </div>
-    <div class="solution-item">
-      <div class="solution-icon">📣</div>
-      <div class="solution-item-text">SNS運用を効率化</div>
+    <div class="sol-item">
+      <div class="sol-icon">📋</div>
+      <div class="sol-body">
+        <div class="sol-title">議事録・メモをまとめる</div>
+        <div class="sol-detail">録音データや走り書きから</div>
+      </div>
+      <div class="sol-tag">自動生成</div>
     </div>
-    <div class="solution-item">
-      <div class="solution-icon">✨</div>
-      <div class="solution-item-text">制作物を内製化</div>
+    <div class="sol-item">
+      <div class="sol-icon">🎨</div>
+      <div class="sol-body">
+        <div class="sol-title">デザインを仕上げる</div>
+        <div class="sol-detail">指示するだけで</div>
+      </div>
+      <div class="sol-tag">指示だけで完成</div>
     </div>
-    <div class="solution-item">
-      <div class="solution-icon">🏢</div>
-      <div class="solution-item-text">バックオフィスを整備</div>
+    <div class="sol-item">
+      <div class="sol-icon">💰</div>
+      <div class="sol-body">
+        <div class="sol-title">経理・帳簿をつける</div>
+        <div class="sol-detail">レシート・明細から</div>
+      </div>
+      <div class="sol-tag">自動整理</div>
     </div>
 
-    <div class="solution-result">
-      <p>その結果</p>
-      <div class="solution-result-main">
-        "自分にしかできない仕事"に<br>集中できる状態へ
-      </div>
+    <div class="sol-result">
+      <p class="sol-result-label">その結果</p>
+      <p class="sol-result-main">"自分にしかできない仕事"に<br>集中できる状態へ</p>
     </div>
   </section>
 
 
-  <!-- ========== FUTURE ========== -->
-  <section class="future">
-    <div style="text-align:center; margin-bottom:28px;">
-      <span class="section-label">YOUR FUTURE</span>
-      <h2 class="section-title">
-        この講座を終えた<br><span>あなたは</span>
+  <!-- ========== OUTPUT ========== -->
+  <section class="output">
+    <div style="text-align:center; margin-bottom:26px;">
+      <span class="section-label">OUTPUT</span>
+      <h2 class="section-title" style="text-align:center;">
+        受講後に<br><span>作れるようになるもの</span>
       </h2>
       <div class="divider"></div>
     </div>
 
-    <ul class="future-list">
-      <li>
-        <div class="check">✓</div>
-        時間に追われる毎日から抜け出し
-      </li>
-      <li>
-        <div class="check">✓</div>
-        やりたい仕事に集中できるようになり
-      </li>
-      <li>
-        <div class="check">✓</div>
-        自分のサービスをちゃんと育てられる
-      </li>
-    </ul>
-
-    <div class="future-result">
-      <p>そして</p>
-      <div class="future-result-main">
-        「やってよかった」と心から<br>思える働き方になります
+    <div class="output-grid">
+      <div class="output-card">
+        <div class="output-thumb ot-sns">📱</div>
+        <div class="output-info">
+          <div class="output-title">SNS投稿</div>
+          <div class="output-desc">Instagram / X 用<br>プロ品質の投稿文</div>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-thumb ot-lp">📄</div>
+        <div class="output-info">
+          <div class="output-title">LP・セールス文</div>
+          <div class="output-desc">売れる構成を<br>AIが自動生成</div>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-thumb ot-notion">📋</div>
+        <div class="output-info">
+          <div class="output-title">Notionテンプレ</div>
+          <div class="output-desc">業務管理・経理を<br>自動化する仕組み</div>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-thumb ot-design">🎨</div>
+        <div class="output-info">
+          <div class="output-title">デザイン・バナー</div>
+          <div class="output-desc">Canva連携で<br>指示するだけ完成</div>
+        </div>
       </div>
     </div>
-  </section>
 
-
-  <!-- ========== CORE MESSAGE ========== -->
-  <section class="core-msg">
-    <p class="core-msg-sub">AI活用の本質</p>
-    <p class="core-msg-main">
-      AIを使う目的は<br>
-      ラクをすることではありません。
-    </p>
-    <div class="core-msg-highlight">
-      自分の人生を<br>取り戻すことです
+    <div class="output-cta">
+      受講後すぐに、実務で使える<br>
+      <span>アウトプットが生まれます</span>
     </div>
   </section>
 
 
   <!-- ========== FEATURES ========== -->
   <section class="features">
-    <div style="text-align:center; margin-bottom:32px;">
+    <div style="text-align:center; margin-bottom:30px;">
       <span class="section-label">FEATURES</span>
-      <h2 class="section-title">
-        講座の<span>4つの特徴</span>
-      </h2>
+      <h2 class="section-title" style="text-align:center;">講座の<span>4つの特徴</span></h2>
       <div class="divider"></div>
     </div>
 
     <div class="feature-card">
-      <div class="feature-num">
+      <div class="feature-head">
         <div class="feature-num-circle">①</div>
-        <div class="feature-num-label">時間を生み出すことに特化</div>
+        <div class="feature-name">完全初心者からOK</div>
       </div>
-      <p class="feature-desc">
-        「やりたいことができない」最大の理由は時間不足。
-        この講座はまず"余白"を作ることから設計されています。
-      </p>
-      <div class="feature-arrow">
-        <span class="feature-arrow-label">→</span>
-        <span class="feature-arrow-text">まず"余白"を作る</span>
+      <p class="feature-body">初期設定からすべて丁寧に解説。コードの知識は一切不要。「難しそう」という不安を取り除くところから始めます。</p>
+      <div class="feature-tags">
+        <span class="feature-tag">初期設定から解説</span>
+        <span class="feature-tag">コード不要</span>
+        <span class="feature-tag">完全初心者OK</span>
       </div>
     </div>
 
     <div class="feature-card">
-      <div class="feature-num">
+      <div class="feature-head">
         <div class="feature-num-circle">②</div>
-        <div class="feature-num-label">外注なしでも回る仕組み</div>
+        <div class="feature-name">AIノウハウではなく<br>"仕事に落とし込む設計"</div>
       </div>
-      <p class="feature-desc">
-        高い外注費をかけなくても、AIを使えば一人でも
-        クオリティの高い仕事ができる仕組みを作ります。
-      </p>
-      <div class="feature-arrow">
-        <span class="feature-arrow-label">→</span>
-        <span class="feature-arrow-text">コストに悩まない</span>
+      <p class="feature-body">断片的なAI知識を教える講座ではありません。実際の業務フローに一気通貫で落とし込み、「知っている」から「使えている」へ変える設計です。</p>
+      <div class="feature-tags">
+        <span class="feature-tag">一気通貫</span>
+        <span class="feature-tag">オールインワン</span>
       </div>
     </div>
 
     <div class="feature-card">
-      <div class="feature-num">
+      <div class="feature-head">
         <div class="feature-num-circle">③</div>
-        <div class="feature-num-label">初心者でも実践できる</div>
+        <div class="feature-name">まず"余白"を作ることに特化</div>
       </div>
-      <p class="feature-desc">
-        AIが初めてでも大丈夫。ゼロから丁寧に
-        ステップを踏んで実践できる構成です。
-      </p>
-      <div class="feature-arrow">
-        <span class="feature-arrow-label">→</span>
-        <span class="feature-arrow-text">0からでも大丈夫</span>
-      </div>
+      <p class="feature-body">「やりたいことができない」最大の原因は時間不足。この講座はまず余白を生み出すことから設計されています。</p>
     </div>
 
     <div class="feature-card">
-      <div class="feature-num">
+      <div class="feature-head">
         <div class="feature-num-circle">④</div>
-        <div class="feature-num-label">成功体験を設計</div>
+        <div class="feature-name">外注なしで回る仕組みを作る</div>
       </div>
-      <p class="feature-desc">
-        「難しくてわからない」で終わらせない。
-        小さな成功体験を積み重ねることで自信につながります。
-      </p>
-      <div class="feature-arrow">
-        <span class="feature-arrow-label">→</span>
-        <span class="feature-arrow-text">「できた！」を積み重ねる</span>
-      </div>
+      <p class="feature-body">高い外注費をかけなくても、AIを使えば一人でクオリティの高い仕事ができる体制を作ります。コストの不安から解放されます。</p>
     </div>
   </section>
 
 
   <!-- ========== CURRICULUM ========== -->
   <section class="curriculum">
-    <div style="text-align:center; margin-bottom:28px;">
+    <div style="text-align:center; margin-bottom:26px;">
       <span class="section-label">CURRICULUM</span>
       <h2 class="section-title" style="text-align:center;">カリキュラム</h2>
       <div class="divider"></div>
@@ -1300,37 +1506,95 @@
     </div>
 
     <ul class="chapter-list">
-      <li class="chapter-item">
-        <div class="chapter-num">01</div>
-        <div class="chapter-title">AI時代の働き方</div>
+      <li class="chapter">
+        <div class="chapter-head">
+          <div class="chapter-num">01</div>
+          <div class="chapter-title">AI時代の働き方</div>
+        </div>
+        <div class="chapter-body">
+          <ul>
+            <li>AIの基礎から学ぶ入門編。なぜ今がチャンスなのかを理解する</li>
+            <li>自分のビジネスにどうAIを活かすか、ロードマップを設計する</li>
+            <li>主要AIツールの特徴と使い分けを習得し、迷わず動き出せる</li>
+          </ul>
+        </div>
       </li>
-      <li class="chapter-item">
-        <div class="chapter-num">02</div>
-        <div class="chapter-title">自分専用AIの構築</div>
+
+      <li class="chapter">
+        <div class="chapter-head">
+          <div class="chapter-num">02</div>
+          <div class="chapter-title">自分専用AIの構築</div>
+        </div>
+        <div class="chapter-body">
+          <ul>
+            <li>Claudeのアカウント設定から使い方まで完全網羅。初期設定で迷わない</li>
+            <li>自分のビジネスに最適化した"AIペルソナ"を作成。毎回説明不要になる</li>
+            <li>プロンプトの基礎から応用まで、実務に直結するスキルを習得</li>
+          </ul>
+        </div>
       </li>
-      <li class="chapter-item" style="border:1.5px solid var(--terracotta-pale);">
-        <div class="chapter-num" style="background:var(--terracotta); color:white; border-color:var(--terracotta);">03</div>
-        <div class="chapter-title" style="font-weight:700;">日常業務の自動化</div>
-        <span class="chapter-badge">⭐ 人気</span>
+
+      <li class="chapter" style="border:1.5px solid var(--terracotta-pale);">
+        <div class="chapter-head">
+          <div class="chapter-num" style="background:var(--terracotta); color:white; border-color:var(--terracotta);">03</div>
+          <div class="chapter-title">日常業務の自動化</div>
+          <span class="chapter-badge">⭐ 人気</span>
+        </div>
+        <div class="chapter-body">
+          <ul>
+            <li>毎日の繰り返し作業をAIで自動化。メール・スケジュール・タスク管理を効率化</li>
+            <li>議事録・報告書を音声や走り書きから瞬時に生成する仕組みを構築</li>
+            <li>実践して作業時間を最大−5時間削減した具体的なフロー設計を公開</li>
+          </ul>
+        </div>
       </li>
-      <li class="chapter-item">
-        <div class="chapter-num">04</div>
-        <div class="chapter-title">SNS運用の効率化</div>
+
+      <li class="chapter">
+        <div class="chapter-head">
+          <div class="chapter-num">04</div>
+          <div class="chapter-title">SNS運用の効率化</div>
+        </div>
+        <div class="chapter-body">
+          <ul>
+            <li>投稿文・ハッシュタグ・キャプションをAIで一括生成。10分で1週間分の投稿を準備</li>
+            <li>月間コンテンツカレンダーを自動作成し、投稿に追われる日々から解放される</li>
+            <li>Canvaと連携してビジュアルコンテンツも内製化。デザイン費ゼロを実現</li>
+          </ul>
+        </div>
       </li>
-      <li class="chapter-item">
-        <div class="chapter-num">05</div>
-        <div class="chapter-title">制作物の内製化</div>
+
+      <li class="chapter">
+        <div class="chapter-head">
+          <div class="chapter-num">05</div>
+          <div class="chapter-title">制作物の内製化</div>
+        </div>
+        <div class="chapter-body">
+          <ul>
+            <li>LP・セールスレター・プロフィール文をAIで作成。外注30万円分の仕事を内製化</li>
+            <li>デザイン指示書をAIで自動生成し、Canvaへ連携して完成させる一気通貫フロー</li>
+            <li>ブランドガイドラインを言語化し、AIが常に"自分らしい"制作物を出力できる設定</li>
+          </ul>
+        </div>
       </li>
-      <li class="chapter-item">
-        <div class="chapter-num">06</div>
-        <div class="chapter-title">バックオフィスの効率化</div>
+
+      <li class="chapter">
+        <div class="chapter-head">
+          <div class="chapter-num">06</div>
+          <div class="chapter-title">バックオフィスの効率化</div>
+        </div>
+        <div class="chapter-body">
+          <ul>
+            <li>経費管理・帳簿・請求書をAIで自動整理。苦手な経理作業をまるごと手放す</li>
+            <li>契約書・業務委託書をテンプレートから瞬時に生成。法的な手間も削減</li>
+            <li>事業全体の管理をAIダッシュボードで一元化し、経営の見通しを常に把握</li>
+          </ul>
+        </div>
       </li>
     </ul>
 
     <div class="curriculum-note">
       <p><strong>「時間を取り戻す」ための実践設計</strong><br>
-      各レッスンはすぐ実務に使える内容で構成。<br>
-      受講後すぐに業務改善が始められます。</p>
+      各レッスンはすぐ実務に使える内容で構成。<br>受講後すぐに業務改善が始められます。</p>
     </div>
   </section>
 
@@ -1338,134 +1602,148 @@
   <!-- ========== BONUS ========== -->
   <section class="bonus">
     <span class="section-label">SPECIAL BONUS</span>
-    <h2 class="bonus-headline">
-      すぐ実務で使える<br><span>10大特典</span>
-    </h2>
-    <p class="bonus-tagline">
-      「わからない」「進まない」を防ぐ<br>実務直結の特典を10個ご用意しました
-    </p>
+    <h2 class="bonus-hl">すぐ実務で使える<br><span>10大特典</span></h2>
+    <p class="bonus-tagline">「わからない」「進まない」を防ぐ<br>実務直結の特典を10個ご用意しました</p>
 
-    <!-- 公開特典 -->
-    <div class="bonus-cat">
-      <div class="bonus-cat-line"></div>
-      <div class="bonus-cat-label">公開特典 GIFT 1〜3</div>
-      <div class="bonus-cat-line"></div>
+    <div class="bonus-divider">
+      <div class="bonus-divider-line"></div>
+      <div class="bonus-divider-label">公開特典 GIFT 1〜3</div>
+      <div class="bonus-divider-line"></div>
     </div>
 
-    <div class="gift-card">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">🪄</span>
-        <span class="gift-num">GIFT 1</span>
+    <div class="gift">
+      <div class="gift-img">
+        <img src="" alt="Claude完全セットアップガイド">
+        <span class="gift-img-placeholder-icon">🪄</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
+        <div class="gift-num-label">GIFT 1</div>
         <div class="gift-title">Claude完全セットアップガイド</div>
-        <div class="gift-desc">はじめてでも迷わないClaudeの始め方</div>
+        <div class="gift-desc">はじめてでも迷わないClaudeの始め方。アカウント作成から初期設定まで画面キャプチャ付きで丁寧に解説</div>
       </div>
     </div>
 
-    <div class="gift-card">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">🌅</span>
-        <span class="gift-num">GIFT 2</span>
+    <div class="gift">
+      <div class="gift-img">
+        <img src="" alt="My Morning Briefing ガイド">
+        <span class="gift-img-placeholder-icon">🌅</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
+        <div class="gift-num-label">GIFT 2</div>
         <div class="gift-title">My Morning Briefing ガイド</div>
-        <div class="gift-desc">毎朝10分で1日が整う仕組みの作り方</div>
+        <div class="gift-desc">毎朝10分で1日が整う仕組みの作り方。スケジュール・タスク・優先順位をAIが自動整理する朝習慣</div>
       </div>
     </div>
 
-    <div class="gift-card">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">💡</span>
-        <span class="gift-num">GIFT 3</span>
+    <div class="gift">
+      <div class="gift-img">
+        <img src="" alt="Claudeプロンプト20選">
+        <span class="gift-img-placeholder-icon">💡</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
+        <div class="gift-num-label">GIFT 3</div>
         <div class="gift-title">Claudeプロンプト20選</div>
-        <div class="gift-desc">コピペで使える実践プロンプト集</div>
+        <div class="gift-desc">コピペで使える実践プロンプト集。SNS投稿・メール返信・企画立案など副業・起業で使える厳選20種</div>
       </div>
     </div>
 
-    <!-- 会員限定特典 -->
-    <div class="bonus-cat" style="margin-top:28px;">
-      <div class="bonus-cat-line"></div>
-      <div class="bonus-cat-label exclusive">★ 講座会員限定特典 GIFT 4〜10</div>
-      <div class="bonus-cat-line"></div>
+    <div class="bonus-divider" style="margin-top:28px;">
+      <div class="bonus-divider-line"></div>
+      <div class="bonus-divider-label gold">★ 講座会員限定特典 GIFT 4〜10</div>
+      <div class="bonus-divider-line"></div>
     </div>
 
-    <div class="gift-card exclusive">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">🎨</span>
-        <span class="gift-num">GIFT 4</span>
+    <div class="gift ex">
+      <div class="gift-img">
+        <img src="" alt="ブランドガイドライン作成テンプレート">
+        <span class="gift-img-placeholder-icon">🎨</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
-        <div class="gift-title">ブランドガイドライン<br>作成テンプレート</div>
-        <div class="gift-desc">自分の世界観・トーン・色を言語化するテンプレ。<br>Ch2 Lesson 3と完全連動</div>
+        <div class="gift-num-label">GIFT 4</div>
+        <div class="gift-title">ブランドガイドライン作成テンプレート</div>
+        <div class="gift-desc">自分の世界観・トーン・色を言語化するテンプレ。AIが常に"あなたらしい"文章を出力するための設定ファイル</div>
       </div>
     </div>
 
-    <div class="gift-card exclusive">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">⚡</span>
-        <span class="gift-num">GIFT 5</span>
+    <div class="gift ex">
+      <div class="gift-img">
+        <img src="" alt="Skillsライブラリ">
+        <span class="gift-img-placeholder-icon">⚡</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
+        <div class="gift-num-label">GIFT 5</div>
         <div class="gift-title">Skillsライブラリ</div>
-        <div class="gift-desc">実際に使っているSkillsをまるごと提供。<br>月間スケジュール・経費管理・セミナー企画など実戦版</div>
+        <div class="gift-desc">実際に使っているSkillsをまるごと提供。月間スケジュール・経費管理・セミナー企画など実戦版をそのままコピー可能</div>
       </div>
     </div>
 
-    <div class="gift-card exclusive">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">📱</span>
-        <span class="gift-num">GIFT 6</span>
+    <div class="gift ex">
+      <div class="gift-img">
+        <img src="" alt="SNS投稿テンプレート30選">
+        <span class="gift-img-placeholder-icon">📱</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
-        <div class="gift-title">SNS投稿テンプレート30選<br>（Canva連携版）</div>
-        <div class="gift-desc">フィード・リール・ストーリーズ用Canvaテンプレ。<br>Claude×Canvaで即完成する型</div>
+        <div class="gift-num-label">GIFT 6</div>
+        <div class="gift-title">SNS投稿テンプレート30選（Canva連携版）</div>
+        <div class="gift-desc">フィード・リール・ストーリーズ用Canvaテンプレ。Claude×Canvaで即完成する型を30パターン収録</div>
       </div>
     </div>
 
-    <div class="gift-card exclusive">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">📄</span>
-        <span class="gift-num">GIFT 7</span>
+    <div class="gift ex">
+      <div class="gift-img">
+        <img src="" alt="契約書・業務委託書ひな形セット">
+        <span class="gift-img-placeholder-icon">📄</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
-        <div class="gift-title">契約書・業務委託書<br>ひな形セット</div>
-        <div class="gift-desc">よく使う契約書10種のClaude用ひな形。<br>料金・条件を入れるだけで完成</div>
+        <div class="gift-num-label">GIFT 7</div>
+        <div class="gift-title">契約書・業務委託書ひな形セット</div>
+        <div class="gift-desc">よく使う契約書10種のClaude用ひな形。料金・条件を入れるだけで完成。士業への外注費を削減できる</div>
       </div>
     </div>
 
-    <div class="gift-card exclusive">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">💬</span>
-        <span class="gift-num">GIFT 8</span>
+    <div class="gift ex">
+      <div class="gift-img">
+        <img src="" alt="月1相談会">
+        <span class="gift-img-placeholder-icon">💬</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
-        <div class="gift-title">月1相談会<br>（オープンチャット）</div>
-        <div class="gift-desc">月1回60分、直接質問できるライブ相談会。<br>受講生限定チャットで継続サポート</div>
+        <div class="gift-num-label">GIFT 8</div>
+        <div class="gift-title">月1相談会（オープンチャット）</div>
+        <div class="gift-desc">月1回60分、直接質問できるライブ相談会。受講生限定チャットで継続サポート。卒業後も安心</div>
       </div>
     </div>
 
-    <div class="gift-card exclusive">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">🌸</span>
-        <span class="gift-num">GIFT 9</span>
+    <div class="gift ex">
+      <div class="gift-img">
+        <img src="" alt="ロードマップセミナーアーカイブ">
+        <span class="gift-img-placeholder-icon">🌸</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
-        <div class="gift-title">ロードマップセミナー<br>アーカイブ視聴権</div>
-        <div class="gift-desc">「幸せな働き方と人生を叶える複業・起業<br>ロードマップセミナー」の全アーカイブ</div>
+        <div class="gift-num-label">GIFT 9</div>
+        <div class="gift-title">ロードマップセミナーアーカイブ視聴権</div>
+        <div class="gift-desc">「幸せな働き方と人生を叶える複業・起業ロードマップセミナー」の全アーカイブ。何度でも見直し可能</div>
       </div>
     </div>
 
-    <div class="gift-card exclusive">
-      <div class="gift-num-wrap">
-        <span class="gift-emoji">🎁</span>
-        <span class="gift-num">GIFT 10</span>
+    <div class="gift ex">
+      <div class="gift-img">
+        <img src="" alt="ICORE入会特典">
+        <span class="gift-img-placeholder-icon">🎁</span>
+        <span class="gift-img-placeholder-text">画像</span>
       </div>
       <div class="gift-body">
-        <div class="gift-title">ICORE入会特典<br>3万円割引券</div>
-        <div class="gift-desc">ICORE本講座への入会時に使える3万円割引クーポン。<br>次のステップへ進める導線</div>
+        <div class="gift-num-label">GIFT 10</div>
+        <div class="gift-title">ICORE入会特典 3万円割引券</div>
+        <div class="gift-desc">ICORE本講座への入会時に使える3万円割引クーポン。次のステップへ進む方への特別優待</div>
       </div>
     </div>
   </section>
@@ -1473,7 +1751,7 @@
 
   <!-- ========== PRICE ========== -->
   <section class="price" id="apply">
-    <div style="text-align:center; margin-bottom:28px;">
+    <div style="text-align:center; margin-bottom:26px;">
       <span class="section-label">PRICE</span>
       <h2 class="section-title" style="text-align:center;">受講料金</h2>
       <div class="divider"></div>
@@ -1481,86 +1759,101 @@
 
     <div class="price-card">
       <p class="price-normal">通常価格</p>
-      <p class="price-normal-value">¥98,000</p>
-
+      <p class="price-normal-val">¥98,000</p>
       <div class="price-divider"></div>
-
-      <div class="price-limit-badge">先行300名限定価格</div>
-      <div class="price-special">¥79,800</div>
-      <p class="price-special-sub">（税込）</p>
-
+      <div class="price-badge">先行300名限定価格</div>
+      <div class="price-main">¥79,800</div>
+      <p class="price-tax">（税込）</p>
       <div class="price-save">¥18,200 お得！</div>
-
+      <div class="price-outsource">
+        💡 外注を頼む<strong>1回分以下の金額</strong>で、<br>
+        自分でできるスキルが一生身につく
+      </div>
       <a href="#" class="btn-primary">
-        今すぐ申し込む <span class="btn-arrow">▶</span>
+        今すぐ申し込む →
         <span class="btn-sub">先行価格は定員になり次第終了</span>
       </a>
     </div>
   </section>
 
 
-  <!-- ========== WHO ========== -->
-  <section class="who">
-    <div style="text-align:center; margin-bottom:24px;">
+  <!-- ========== FOR YOU ========== -->
+  <section class="for-you">
+    <div style="text-align:center; margin-bottom:22px;">
       <span class="section-label">FOR YOU</span>
       <h2 class="section-title" style="text-align:center;">こんな方へ</h2>
       <div class="divider"></div>
     </div>
-
-    <ul class="who-list">
-      <li class="who-item">
-        <div class="who-dot"></div>
-        <div class="who-text">副業・起業に挑戦したけど続かなかった</div>
-      </li>
-      <li class="who-item">
-        <div class="who-dot"></div>
-        <div class="who-text">時間がなくて前に進めない</div>
-      </li>
-      <li class="who-item">
-        <div class="who-dot"></div>
-        <div class="who-text">外注する余裕がない</div>
-      </li>
-      <li class="who-item">
-        <div class="who-dot"></div>
-        <div class="who-text">本当はもっとできると感じている</div>
-      </li>
+    <ul class="for-you-list">
+      <li class="for-you-item"><div class="for-you-dot"></div><div class="for-you-text">副業・起業に挑戦したけど続かなかった</div></li>
+      <li class="for-you-item"><div class="for-you-dot"></div><div class="for-you-text">時間がなくて前に進めない</div></li>
+      <li class="for-you-item"><div class="for-you-dot"></div><div class="for-you-text">外注する余裕がない</div></li>
+      <li class="for-you-item"><div class="for-you-dot"></div><div class="for-you-text">本当はもっとできると感じている</div></li>
+      <li class="for-you-item"><div class="for-you-dot"></div><div class="for-you-text">AIに興味はあるが、難しそうで踏み出せていない</div></li>
     </ul>
   </section>
 
 
   <!-- ========== FINAL MESSAGE ========== -->
-  <section class="final-msg">
-    <p class="final-intro">
-      もし今<br>
-      「やりたいのにできない」<br>
-      そう感じているなら
-    </p>
+  <section class="final">
 
-    <div class="final-point">
-      <div class="final-point-arrow">▶</div>
-      <div class="final-point-text">それはあなたのせいではありません</div>
-    </div>
-
-    <div class="final-point">
-      <div class="final-point-arrow">▶</div>
-      <div class="final-point-text">環境と仕組みの問題です</div>
-    </div>
-
-    <div style="padding: 20px 0; text-align:center;">
-      <p style="font-size:14px; color:var(--text-sub); margin-bottom:12px;">そしてその仕組みは</p>
-      <div style="display:inline-block; background:var(--cream); border-radius:12px; padding:16px 28px; font-family:'Noto Serif JP',serif; font-size:18px; font-weight:700; color:var(--terracotta);">
-        AIで変えられます。
+    <!-- なぜこの講座をつくったのか -->
+    <div class="why-story">
+      <div class="why-story-eyebrow">
+        💌 なぜこの講座をつくったのか
+      </div>
+      <h3 class="why-story-title">
+        「やりたいことはあるけど、<br>時間が足りない」
+      </h3>
+      <div class="why-story-body">
+        これまで<span class="why-story-num">3,000名以上</span>のキャリアに<br>
+        伴走してきた中で、<br>
+        ずっと悔しかったことがあります。<br><br>
+        <strong>頑張りたくて、才能ある女性たちが<br>
+        諦めていく。</strong><br><br>
+        それは努力や根性が足りないんじゃなく、<br>
+        家庭の役割・社会の構造…<br>
+        まだ変えられない現実があるから。<br><br>
+        AIが革命的に進化する今、確信しています。<br>
+        <span class="hl">女性が本当に理想の働き方と暮らしを叶えられる、<br>
+        人生100年時代で最高のチャンスが今です。</span>
+      </div>
+      <div class="why-story-close">
+        理想を諦めそうな方に届けたくて、<br>
+        この講座をつくりました。
       </div>
     </div>
 
     <div class="final-point">
-      <div class="final-point-arrow">▶</div>
-      <div class="final-point-text">「自分じゃなくてもいいこと」は手放していい</div>
+      <div class="final-arrow">▶</div>
+      <div class="final-text">それはあなたのせいではありません</div>
+    </div>
+    <div class="final-point">
+      <div class="final-arrow">▶</div>
+      <div class="final-text">1人で全部やる前提になっていること、それが問題です</div>
+    </div>
+
+    <div style="padding:20px 0; text-align:center;">
+      <p style="font-size:13px; color:var(--text-sub); margin-bottom:12px;">そして、その仕組みは</p>
+      <div style="display:inline-block; background:var(--cream); border-radius:12px; padding:15px 26px; font-family:'Noto Serif JP',serif; font-size:18px; font-weight:700; color:var(--terracotta);">
+        AIで変えられます。
+      </div>
+    </div>
+
+    <div class="ai-ease">
+      <div class="ai-ease-title">「AIって難しそう…」と感じていた方へ</div>
+      <div class="ai-ease-item">機械みたいな働き方をするわけではありません</div>
+      <div class="ai-ease-item">AIに仕事を"奪われる"のではなく、AIに"任せる"だけ</div>
+      <div class="ai-ease-item">あなたらしさはそのまま。面倒な作業だけを手放せます</div>
     </div>
 
     <div class="final-point">
-      <div class="final-point-arrow">▶</div>
-      <div class="final-point-text">「あなたにしかできないこと」に時間を使ってほしい</div>
+      <div class="final-arrow">▶</div>
+      <div class="final-text">「やらなくていいこと」は手放していい</div>
+    </div>
+    <div class="final-point">
+      <div class="final-arrow">▶</div>
+      <div class="final-text">「あなたにしかできないこと」に時間を使ってほしい</div>
     </div>
 
     <p class="final-close">
@@ -1573,26 +1866,21 @@
   </section>
 
 
-  <!-- ========== FINAL CTA ========== -->
-  <section class="cta-section">
+  <!-- ========== CTA ========== -->
+  <section class="cta">
     <h2>
       <span>先行300名限定</span><br>
-      今だけの価格で<br>
-      新しい働き方を始めましょう
+      今だけの価格で<br>新しい働き方を始めましょう
     </h2>
-
     <a href="#" class="btn-primary" style="font-size:16px; padding:20px 24px;">
-      先行300名限定で申し込む <span class="btn-arrow">▶</span>
+      先行300名限定で申し込む →
       <span class="btn-sub">▼ 今すぐ詳細を確認する</span>
     </a>
-
-    <p class="cta-limit">
-      ＊ 先行価格は定員に達し次第、<br>通常価格（¥98,000）に戻ります
-    </p>
+    <p class="cta-note">＊ 先行価格は定員に達し次第、<br>通常価格（¥98,000）に戻ります</p>
   </section>
 
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ========== FOOTER ========== */
   <footer>
     <p>副業・起業女性のためのAI完全活用教科書</p>
     <p style="margin-top:8px;">© 2026 All Rights Reserved.</p>

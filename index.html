@@ -515,6 +515,22 @@
       color: var(--terracotta); padding: 8px 0; letter-spacing: 0.04em;
     }
 
+    /* Persona pill & connector */
+    .persona-pill {
+      display: block; background: var(--terracotta); color: white;
+      font-size: 13px; font-weight: 700; padding: 10px 18px;
+      border-radius: 100px; margin-bottom: 14px; text-align: center;
+    }
+    .ai-connector {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px; font-weight: 700; color: var(--terracotta);
+      text-align: center; margin-bottom: 10px; letter-spacing: 0.05em;
+    }
+    .persona-tagline {
+      font-size: 14px; line-height: 1.8; color: var(--brown-dark);
+      text-align: center; margin-bottom: 22px; font-weight: 500;
+    }
+
     /* ========== PROBLEM ========== */
     .problem { background: var(--cream); text-align: center; }
     .problem-root {
@@ -1110,65 +1126,34 @@
     <!-- ===== PATTERN 01: 初心者 ===== -->
     <div class="ptn-block">
       <div class="ptn-inner">
-        <div class="who-pattern" style="margin-bottom:10px;">PATTERN 01</div>
-        <div class="persona-profile">
-          <div class="persona-avatar">👩</div>
-          <div>
-            <div class="persona-name">Aさん｜32歳・会社員</div>
-            <div class="persona-tags">
-              <span class="ptag">子ども2人</span>
-              <span class="ptag">副業を始めたい</span>
-              <span class="ptag">AI初心者</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="ptn-q" style="margin-bottom:12px;">Aさんの今日のスケジュール</p>
-        <div class="schedule-wrap">
-          <div class="sch-block b">
-            <div class="sch-head">😔 受講前 — 「やりたいのに動けない毎日」</div>
-            <div class="sch-item"><span class="sch-t">07:00</span><span class="sch-ev">朝食・子ども2人の支度</span></div>
-            <div class="sch-item"><span class="sch-t">08:30</span><span class="sch-ev">出社・仕事</span></div>
-            <div class="sch-item"><span class="sch-t">18:00</span><span class="sch-ev">帰宅・夕食・お風呂・寝かしつけ</span></div>
-            <div class="sch-item hi"><span class="sch-t">22:00</span><span class="sch-ev">「副業やりたいけど…何から始めれば？」→ 結局スマホを見て終わる</span></div>
-            <div class="sch-item low"><span class="sch-t">23:00</span><span class="sch-ev">疲れて就寝</span></div>
-          </div>
-          <div class="sch-arrow">▼ 受講後</div>
-          <div class="sch-block a">
-            <div class="sch-head">✨ 受講後 — 「隙間時間で副業が動き出した」</div>
-            <div class="sch-item"><span class="sch-t">07:00</span><span class="sch-ev">朝食・支度（変わらず）</span></div>
-            <div class="sch-item"><span class="sch-t">08:00</span><span class="sch-ev">通勤中にAIで今日のSNS投稿を作成（5分）</span></div>
-            <div class="sch-item"><span class="sch-t">18:00</span><span class="sch-ev">帰宅・夕食・家族時間</span></div>
-            <div class="sch-item hi"><span class="sch-t">21:30</span><span class="sch-ev">AIと30分だけ作業→ LP・集客・返信を一気に完了</span></div>
-            <div class="sch-item"><span class="sch-t">22:00</span><span class="sch-ev">余裕で就寝 😊</span></div>
-            <div class="sch-result">隙間時間だけで副業がスタートできた！</div>
-          </div>
-        </div>
+        <div class="who-pattern" style="margin-bottom:12px;">PATTERN 01</div>
+        <div class="persona-pill">👩 Aさん｜32歳・会社員・子ども2人</div>
+        <div class="ai-connector">× AIで</div>
+        <p class="persona-tagline">「何から始めればいいかわからない」が<br>隙間時間で副業が動き出す毎日へ。</p>
       </div>
 
       <div class="ba-before before">
-        <div class="ba-title">今のあなた <span>😔</span></div>
+        <div class="ba-title">受講前のAさん <span>😔</span></div>
         <div class="ba-rule"></div>
         <div class="ba-grid">
-          <div class="thought">行動できないまま<br>時間が過ぎていく</div>
+          <div class="thought">何から<br><span class="num">始めればいい？</span></div>
           <div class="thought">AIは難しそう<br><span class="num">自分には無理…</span></div>
-          <div class="thought">何から始めれば<br><span class="num">いいかわからない</span></div>
-          <div class="thought">気づけば<br><span class="num">何ヶ月も経っていた</span></div>
+          <div class="thought">夜は疲れて<br><span class="num">動けないまま</span></div>
+          <div class="thought">気づけば<br><span class="num">何ヶ月も経った</span></div>
         </div>
       </div>
 
       <div class="ba-after after">
-        <div class="ba-title">受講後のあなた <span>✨</span></div>
+        <div class="ba-title">受講後のAさん <span>✨</span></div>
         <div class="ba-rule"></div>
         <div class="ba-grid">
-          <div class="thought">初期設定も<br><span class="num">迷わずできた</span></div>
-          <div class="thought">AIが毎日の<br><span class="num">頼もしい相棒に</span></div>
-          <div class="thought">隙間時間で<br><span class="num">副業が動き出した</span></div>
-          <div class="thought">「意外と<br><span class="num">できた！」が増えた</span></div>
+          <div class="thought">通勤中に<br><span class="num">SNS投稿が完成</span></div>
+          <div class="thought">夜30分で<br><span class="num">副業が前進</span></div>
+          <div class="thought">「意外と<br><span class="num">できた！」連続</span></div>
+          <div class="thought">隙間時間で<br><span class="num">副業スタート</span></div>
         </div>
         <div class="ba-note">
-          「私でもできた」が
-          <strong>自信と次の一歩につながります ✨</strong>
+          隙間時間だけで<strong>副業が動き出しました ✨</strong>
         </div>
       </div>
     </div>
@@ -1185,40 +1170,10 @@
     <!-- ===== PATTERN 02: 経験者 ===== -->
     <div class="ptn-block">
       <div class="ptn-inner">
-        <div class="who-pattern" style="margin-bottom:10px;">PATTERN 02</div>
-        <div class="persona-profile">
-          <div class="persona-avatar">👩‍💼</div>
-          <div>
-            <div class="persona-name">Bさん｜35歳・フリーランス</div>
-            <div class="persona-tags">
-              <span class="ptag">子ども1人</span>
-              <span class="ptag">すでに副業中</span>
-              <span class="ptag">時間が足りない</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="ptn-q" style="margin-bottom:12px;">Bさんの今日のスケジュール</p>
-        <div class="schedule-wrap">
-          <div class="sch-block b">
-            <div class="sch-head">😂 受講前 — 「もう限界」が口癖だった</div>
-            <div class="sch-item"><span class="sch-t">09:00</span><span class="sch-ev">仕事開始・クライアント対応</span></div>
-            <div class="sch-item hi"><span class="sch-t">11:00</span><span class="sch-ev">SNS投稿を1本作るのに1時間以上かかる</span></div>
-            <div class="sch-item"><span class="sch-t">15:00</span><span class="sch-ev">子どものお迎え・夕食準備</span></div>
-            <div class="sch-item"><span class="sch-t">21:00</span><span class="sch-ev">寝かしつけ後に副業の作業再開</span></div>
-            <div class="sch-item hi"><span class="sch-t">23:30</span><span class="sch-ev">経理・デザイン・LP…「これ全部私が？」→ 深夜まで作業</span></div>
-          </div>
-          <div class="sch-arrow">▼ 受講後</div>
-          <div class="sch-block a">
-            <div class="sch-head">😏 受講後 — 仕事時間が週5時間以上減った</div>
-            <div class="sch-item"><span class="sch-t">09:00</span><span class="sch-ev">仕事開始</span></div>
-            <div class="sch-item hi"><span class="sch-t">09:15</span><span class="sch-ev">AIで今週分のSNS投稿を15分で一気に作成完了</span></div>
-            <div class="sch-item"><span class="sch-t">15:00</span><span class="sch-ev">子どものお迎え・家族時間</span></div>
-            <div class="sch-item hi"><span class="sch-t">21:00</span><span class="sch-ev">AIに経理・LP・返信を任せて30分で作業終了</span></div>
-            <div class="sch-item"><span class="sch-t">21:30</span><span class="sch-ev">好きなことをして余裕で就寝 🌙</span></div>
-            <div class="sch-result">作業時間−5時間／週、売上はそのまま維持！</div>
-          </div>
-        </div>
+        <div class="who-pattern" style="margin-bottom:12px;">PATTERN 02</div>
+        <div class="persona-pill">👩‍💼 Bさん｜35歳・フリーランス・子ども1人</div>
+        <div class="ai-connector">× AIで</div>
+        <p class="persona-tagline">「全部自分でやらなきゃ」から卒業。<br>作業時間を週5時間削減、売上はそのまま。</p>
 
         <div class="task-overflow">
           <p class="task-overflow-label">毎日こなさなきゃいけないこと…</p>
@@ -1238,29 +1193,28 @@
       </div>
 
       <div class="ba-before before">
-        <div class="ba-title">今のあなた <span>😂</span></div>
+        <div class="ba-title">受講前のBさん <span>😂</span></div>
         <div class="ba-rule"></div>
         <div class="ba-grid">
-          <div class="thought">やることが多すぎて<br><span class="num">時間がない</span></div>
-          <div class="thought">家事も育児も<br><span class="num">もう限界！</span></div>
-          <div class="thought">苦手なタスクに<br>追われる日々</div>
-          <div class="thought">自分が<br><span class="num">もう1人欲しい</span></div>
+          <div class="thought">SNS1本に<br><span class="num">1時間以上</span></div>
+          <div class="thought">深夜まで<br><span class="num">作業が終わらない</span></div>
+          <div class="thought">休日も<br><span class="num">「やらなきゃ」</span></div>
+          <div class="thought">もう1人の<br><span class="num">自分が欲しい</span></div>
         </div>
         <div class="ba-note">😂 「もう限界」が口癖だった…</div>
       </div>
 
       <div class="ba-after after">
-        <div class="ba-title">受講後のあなた <span>😏</span></div>
+        <div class="ba-title">受講後のBさん <span>😏</span></div>
         <div class="ba-rule"></div>
         <div class="ba-grid">
-          <div class="thought">苦手な作業<br><span class="num">しなくていい！</span></div>
-          <div class="thought">仕事時間<br><span class="num">−5時間</span></div>
-          <div class="thought">作業効率<br><span class="num">10倍アップ</span></div>
-          <div class="thought">家族時間が<br><span class="num">増えた</span></div>
+          <div class="thought">SNS1週間分<br><span class="num">15分で完成</span></div>
+          <div class="thought">夜21時半に<br><span class="num">仕事が終わる</span></div>
+          <div class="thought">家族との<br><span class="num">時間が増えた</span></div>
+          <div class="thought">売上は<br><span class="num">そのまま維持</span></div>
         </div>
         <div class="ba-note">
-          何よりも心に余裕ができて
-          <strong>仕事も暮らしも豊かになりました 🌿</strong>
+          作業時間−5時間／週、<strong>心に余裕が生まれました 🌿</strong>
         </div>
       </div>
     </div>

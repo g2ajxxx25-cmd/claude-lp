@@ -1798,6 +1798,104 @@
       margin-bottom: 32px;
     }
 
+    /* ========== FAQ ========== */
+    .faq {
+      background: var(--cream);
+      padding: 52px 24px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 16px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(61, 43, 31, 0.06);
+      border: 1px solid var(--border);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-q-num {
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta));
+      color: white;
+      border-radius: 8px;
+      padding: 3px 8px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .faq-q-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--brown-dark);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      color: var(--terracotta);
+      font-size: 14px;
+      margin-top: 4px;
+      transition: transform 0.25s ease;
+    }
+
+    .faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-body {
+      padding: 14px 16px 18px;
+      font-size: 13.5px;
+      color: var(--text-sub);
+      line-height: 1.85;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-check-list {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .faq-check-list li {
+      font-size: 13px;
+      color: var(--brown-mid);
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.6;
+    }
+
+    .faq-check-list li:last-child {
+      border-bottom: none;
+    }
+
+    .faq-check-list li::before {
+      content: '✓';
+      color: var(--terracotta);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
     /* ========== CTA ========== */
     .cta {
       background: linear-gradient(160deg, #3D2B1F 0%, #5A3A28 100%);
@@ -2537,6 +2635,131 @@
       その一歩を<br>
       この講座で一緒に作りましょう。
     </p>
+  </section>
+
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq">
+    <span class="section-label" style="display:block; text-align:center;">FAQ</span>
+    <h2 class="section-title" style="text-align:center;">よくある<span>ご質問</span></h2>
+    <div class="divider"></div>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q1</span>
+        <span class="faq-q-text">この講座は初心者でも受講可能ですか？</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        初心者の方でも安心して受講いただけます。AIツールの基礎知識から大切な初期設定方法も講座に含まれているので、段階的に学べる流れになっています。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q2</span>
+        <span class="faq-q-text">どのような人が受講対象ですか？</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        以下のような方におすすめです。
+        <ul class="faq-check-list">
+          <li>副業・起業で自分らしい働き方を叶えたい方</li>
+          <li>毎日の作業に追われて自分時間が取れない方</li>
+          <li>SNS発信・資料作成・LP制作を外注ゼロで仕上げたい方</li>
+          <li>AIに興味はあるけど何から始めればいいかわからない方</li>
+          <li>子育てや本業と両立しながら理想の働き方を叶えたい方</li>
+          <li>今後のために個人のAIスキルを高めたい方</li>
+          <li>会社員としてAIスキルでキャリアアップしたい方</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q3</span>
+        <span class="faq-q-text">会社員で副業や起業を本格的に始めていなくても学べますか？</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        はい、まだ始めていない方でも問題なく学べます。本講座は副業・起業の準備段階の方から、現役の会社員として業務効率化やキャリアアップに活かしたい方まで幅広く対応しています。AIスキルは今のお仕事でも将来の独立準備でも役立つ一生もののスキルです。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q4</span>
+        <span class="faq-q-text">学習期間や講座の視聴期限はありますか？</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        視聴期限はなく、ご自身のペースで何度でも繰り返しご覧いただけます。さらに、追加料金なしで常に最新情報へアップデートされるので、AIの進化に合わせて長くご活用いただけます。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q5</span>
+        <span class="faq-q-text">一人でできるか不安です、サポート体制はありますか？</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        購入者の方限定のイベントや質問ライブも開催を予定しています。受講生限定のオープンチャットも作成予定なので、今後つながりの場としても企画を進めてまいります。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q6</span>
+        <span class="faq-q-text">SNS発信や資料作成にAIを使うと、機械的にならないか不安です。</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        本講座は慶應大学院でのウェルビーイング研究を元に「私らしさ」を覚えた自分専用AIの構築に特化しています。AIにあなたの世界観・トーン・温度感を学習させる方法を習得できるので、自分らしさが伝わるアウトプットが叶います。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q7</span>
+        <span class="faq-q-text">講座はオンラインで完結しますか？</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        はい、すべてオンラインで完結します。動画+記事のオンライン学習なので、通勤中の電車やご自宅、移動中などお好きな場所・お好きな時間で携帯・PC・iPadにて学習いただけます。
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q8</span>
+        <span class="faq-q-text">忙しくて学びきれるか心配です。</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        1レッスンずつ独立した構成なので、必要なところから学んですぐに実践に活かせます。家事や育児、本業の合間などスキマ時間を活用して、1日10分から始められる設計です。AIを早く習得することで未来の時間が何倍も増えるので、今は時間を確保してスキルを磨きましょう！
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-q-num">Q9</span>
+        <span class="faq-q-text">学んだあと、具体的にどのように活用可能ですか？</span>
+        <span class="faq-chevron">▾</span>
+      </summary>
+      <div class="faq-body">
+        私だけでなく女性向けスクールICOREの中でも実践し、以下のような変化が生まれています。
+        <ul class="faq-check-list">
+          <li>1日の作業時間を-5時間にして自分時間・家族時間を増やす</li>
+          <li>SNS投稿が3時間→30分、発信のストレスがなくなった</li>
+          <li>LP・資料・デザインを外注費ゼロでおしゃれに作れる</li>
+          <li>経理・契約書・事務作業をAIに任せて得意なことに集中できる</li>
+          <li>会社員として業務効率化・キャリアアップに活かせる</li>
+          <li>AI時代の働き方を味方につけて理想の暮らしと収入を両立できる</li>
+        </ul>
+        <p style="font-size:12.5px; color:var(--text-sub); margin-top:12px; line-height:1.75;">新しい副業にAIスキルを活かしたり、現在のビジネスの時短・効率化、会社員として評価アップや昇進のために活用する方もいらっしゃいます。</p>
+      </div>
+    </details>
   </section>
 
 
